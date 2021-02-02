@@ -424,8 +424,8 @@ jobs:
         echo "Install Pyomo..."
         echo ""
         # Test against a branch until PySP is actually removed from Pyomo
-        # $PYTHON_EXE -m pip install -e git+https://github.com/Pyomo/pyomo
-        $PYTHON_EXE -m pip install -e git+https://github.com/jsiirola/pyomo@remove-pysp
+        # $PYTHON_EXE -m pip install git+https://github.com/Pyomo/pyomo
+        $PYTHON_EXE -m pip install git+https://github.com/jsiirola/pyomo@remove-pysp
         echo ""
         echo "Install PySP..."
         echo ""
