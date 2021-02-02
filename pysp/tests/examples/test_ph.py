@@ -107,9 +107,7 @@ def tearDownModule():
 thisDir = dirname(abspath(__file__))
 baselineDir = join(thisDir,"baselines")
 pysp_examples_dir = \
-    join(dirname(dirname(dirname(dirname(thisDir)))),"examples","pysp")
-pyomo_bin_dir = \
-    join(dirname(dirname(dirname(dirname(dirname(dirname(thisDir)))))),"bin")
+    join(dirname(dirname(dirname(thisDir))),"examples")
 
 farmer_examples_dir = join(pysp_examples_dir,"farmer")
 farmer_model_dir = join(farmer_examples_dir,"models")

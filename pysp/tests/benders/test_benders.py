@@ -23,7 +23,7 @@ from pysp.util.misc import (_get_test_nameserver,
 thisdir = dirname(abspath(__file__))
 baselineDir = join(thisdir, "baselines")
 pysp_examples_dir = \
-    join(dirname(dirname(dirname(dirname(thisdir)))), "examples", "pysp")
+    join(dirname(dirname(dirname(thisdir))), "examples")
 
 _run_verbose = True
 _json_exact_comparison = True

@@ -24,7 +24,7 @@ from six import StringIO
 thisdir = dirname(abspath(__file__))
 baselinedir = os.path.join(thisdir, "smps_embedded_baselines")
 pysp_examples_dir = \
-    join(dirname(dirname(dirname(dirname(thisdir)))), "examples", "pysp")
+    join(dirname(dirname(dirname(thisdir))), "examples")
 
 import pyomo.environ as pyo
 from pysp.embeddedsp import (EmbeddedSP,

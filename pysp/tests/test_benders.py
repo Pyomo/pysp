@@ -19,8 +19,8 @@ from os.path import abspath, dirname
 this_test_directory = dirname(abspath(__file__))+os.sep
 
 benders_example_dir = \
-    dirname(dirname(dirname(dirname(abspath(__file__))))) + \
-    os.sep+"examples"+os.sep+"pyomo"+os.sep+"benders"+os.sep
+    dirname(dirname(dirname(abspath(__file__)))) + \
+    os.sep+"examples"+os.sep+"benders"+os.sep
 
 #
 # Import the testing packages

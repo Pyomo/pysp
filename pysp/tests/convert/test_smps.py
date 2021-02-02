@@ -30,7 +30,7 @@ from six import StringIO
 thisdir = dirname(abspath(__file__))
 baselinedir = os.path.join(thisdir, "smps_baselines")
 pysp_examples_dir = \
-    join(dirname(dirname(dirname(dirname(thisdir)))), "examples", "pysp")
+    join(dirname(dirname(dirname(thisdir))), "examples")
 
 _run_verbose = True
 

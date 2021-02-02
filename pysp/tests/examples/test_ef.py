@@ -38,8 +38,7 @@ _diff_tolerance = 1e-5
 
 thisDir = dirname(abspath(__file__))
 baselineDir = join(thisDir,"baselines")
-pysp_examples_dir = join(dirname(dirname(dirname(dirname(thisDir)))),"examples","pysp")
-pyomo_bin_dir = join(dirname(dirname(dirname(dirname(dirname(dirname(thisDir)))))),"bin")
+pysp_examples_dir = join(dirname(dirname(dirname(thisDir))),"examples")
 
 farmer_examples_dir = join(pysp_examples_dir,"farmer")
 farmer_model_dir = join(farmer_examples_dir,"models")

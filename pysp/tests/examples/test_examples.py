@@ -39,8 +39,7 @@ except:
 thisdir = dirname(abspath(__file__))
 baselineDir = join(thisdir, "baselines")
 pysp_examples_dir = \
-    join(dirname(dirname(dirname(dirname(thisdir)))),
-         "examples", "pysp")
+    join(dirname(dirname(dirname(thisdir))), "examples")
 examples_dir = join(pysp_examples_dir, "scripting")
 
 solvers = check_available_solvers('cplex', 'glpk')

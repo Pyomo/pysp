@@ -26,9 +26,7 @@ except:
 thisdir = dirname(abspath(__file__))
 this_test_file_directory = dirname(abspath(__file__))+os.sep
 
-pysp_examples_dir = dirname(dirname(dirname(dirname(dirname(abspath(__file__))))))+os.sep+"examples"+os.sep+"pysp"+os.sep
-
-pyomo_bin_dir = dirname(dirname(dirname(dirname(dirname(dirname(dirname(abspath(__file__))))))))+os.sep+"bin"+os.sep
+pysp_examples_dir = dirname(dirname(dirname(dirname(abspath(__file__)))))+os.sep+"examples"+os.sep
 
 baseline_dir = this_test_file_directory+"baselines"+os.sep
 

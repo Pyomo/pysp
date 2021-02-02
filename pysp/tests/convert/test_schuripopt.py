@@ -25,7 +25,7 @@ from pysp.util.misc import (_get_test_nameserver,
 thisdir = dirname(abspath(__file__))
 baselinedir = os.path.join(thisdir, "schuripopt_baselines")
 pysp_examples_dir = \
-    join(dirname(dirname(dirname(dirname(thisdir)))), "examples", "pysp")
+    join(dirname(dirname(dirname(thisdir))), "examples")
 
 _run_verbose = True
 _diff_tolerance = 1e-6
