@@ -42,11 +42,11 @@ This is worker Worker_79243@sanj2010-112-95.sandia.gov
 Listening for work from dispatcher...
 Attempting to find Pyro dispatcher object...
 Dispatcher Object URI: PYRO://134.253.112.95:7766/86fd705f135831f227b09e34bfb6f4b8be0
-Importing module=[base]/examples/pysp/networkflow/config/aggregategetter.py
+Importing module=[base]/examples/networkflow/config/aggregategetter.py
 Module successfully loaded
-Importing module=[base]/examples/pysp/networkflow/config/rhosettermixed.py
+Importing module=[base]/examples/networkflow/config/rhosettermixed.py
 Module successfully loaded
-Importing module=[base]/examples/pysp/networkflow/config/xboundsetter.py
+Importing module=[base]/examples/networkflow/config/xboundsetter.py
 Module successfully loaded
 This is client 79246@sanj2010-112-95.sandia.gov
 Initializing PH

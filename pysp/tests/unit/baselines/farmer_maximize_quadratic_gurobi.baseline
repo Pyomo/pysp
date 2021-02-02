@@ -93,11 +93,11 @@ Scenarios:
 Scenario tree is valid!
 Scenario-based instance initialization enabled
 Creating instance for scenario=BelowAverageScenario
-Data for scenario=BelowAverageScenario loads from file=[base]/examples/pysp/farmer/scenariodata/BelowAverageScenario.dat
+Data for scenario=BelowAverageScenario loads from file=[base]/examples/farmer/scenariodata/BelowAverageScenario.dat
 Creating instance for scenario=AverageScenario
-Data for scenario=AverageScenario loads from file=[base]/examples/pysp/farmer/scenariodata/AverageScenario.dat
+Data for scenario=AverageScenario loads from file=[base]/examples/farmer/scenariodata/AverageScenario.dat
 Creating instance for scenario=AboveAverageScenario
-Data for scenario=AboveAverageScenario loads from file=[base]/examples/pysp/farmer/scenariodata/AboveAverageScenario.dat
+Data for scenario=AboveAverageScenario loads from file=[base]/examples/farmer/scenariodata/AboveAverageScenario.dat
 Time to construct scenario instances=0.03 seconds
 *** Active Objective 'Total_Cost_Objective' on scenario instance 'AboveAverageScenario' will not be used. ***
 *** Active Objective 'Total_Cost_Objective' on scenario instance 'AverageScenario' will not be used. ***

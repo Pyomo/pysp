@@ -17,8 +17,8 @@ This is client 69188@Ozymandias.local
 Initializing PH
 
 phboundextension using default update interval=1
-WW PH Extension: Loading user-specified configuration from file=[base]/examples/pysp/farmer/config/wwph.cfg
-WW PH Extension: Loading variable suffixes from file=[base]/examples/pysp/farmer/config/wwph.suffixes
+WW PH Extension: Loading user-specified configuration from file=[base]/examples/farmer/config/wwph.cfg
+WW PH Extension: Loading variable suffixes from file=[base]/examples/farmer/config/wwph.suffixes
 User-defined PH solution writer module=pyomo.pysp.plugins.jsonsolutionwriter already imported - skipping
 Starting PH
 

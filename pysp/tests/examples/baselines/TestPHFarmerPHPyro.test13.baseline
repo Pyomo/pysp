@@ -23,8 +23,8 @@ Dispatcher Object URI: PYRO://10.0.0.15:7766/0a00000f146820a08bdb68074653db792e
 This is client 5228@Ozymandias.local
 Initializing PH
 
-WW PH Extension: Loading user-specified configuration from file=[base]/examples/pysp/farmer/config/wwph.cfg
-WW PH Extension: Loading variable suffixes from file=[base]/examples/pysp/farmer/config/wwph.suffixes
+WW PH Extension: Loading user-specified configuration from file=[base]/examples/farmer/config/wwph.cfg
+WW PH Extension: Loading variable suffixes from file=[base]/examples/farmer/config/wwph.suffixes
 User-defined PH solution writer module=pyomo.pysp.plugins.jsonsolutionwriter already imported - skipping
 Starting PH
 

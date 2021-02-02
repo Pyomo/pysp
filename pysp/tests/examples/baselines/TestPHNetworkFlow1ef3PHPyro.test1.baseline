@@ -5,11 +5,11 @@ URI is: PYRO://10.0.0.14:9090/0a00000e867a20bd7fa077fd940a349f1e
 URI written to: [base]/pysp/tests/examples/Pyro_NS_URI
 Name Server started.
 User-defined PH extension module=pyomo.pysp.plugins.phhistoryextension already imported - skipping
-Trying to import module=[base]/examples/pysp/networkflow/config/aggregategetter.py
+Trying to import module=[base]/examples/networkflow/config/aggregategetter.py
 Module successfully loaded
-Trying to import module=[base]/examples/pysp/networkflow/config/rhosettermixed.py
+Trying to import module=[base]/examples/networkflow/config/rhosettermixed.py
 Module successfully loaded
-Trying to import module=[base]/examples/pysp/networkflow/config/xboundsetter.py
+Trying to import module=[base]/examples/networkflow/config/xboundsetter.py
 Module successfully loaded
 Dispatcher is ready.
 Attempting to find Pyro dispatcher object...
@@ -33,8 +33,8 @@ Transmitting user aggregate callback invocations to phsolverservers
 Broadcasting final aggregate data to phsolverservers
 Transmitting user rho callback invocations to phsolverservers
 Transmitting user bound callback invocations to phsolverservers
-WW PH Extension: Loading user-specified configuration from file=[base]/examples/pysp/networkflow/config/wwph-immediatefixing.cfg
-WW PH Extension: Loading variable suffixes from file=[base]/examples/pysp/networkflow/config/wwph.suffixes
+WW PH Extension: Loading user-specified configuration from file=[base]/examples/networkflow/config/wwph-immediatefixing.cfg
+WW PH Extension: Loading variable suffixes from file=[base]/examples/networkflow/config/wwph.suffixes
 User-defined PH solution writer module=pyomo.pysp.plugins.jsonsolutionwriter already imported - skipping
 Starting PH
 

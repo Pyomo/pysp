@@ -103,11 +103,11 @@ Scenario Bundles:
 Scenario tree is valid!
 Scenario-based instance initialization enabled
 Creating instance for scenario=BelowAverageScenario
-Data for scenario=BelowAverageScenario loads from file=[base]/examples/pysp/farmer/scenariodataWithTwoBundles/BelowAverageScenario.dat
+Data for scenario=BelowAverageScenario loads from file=[base]/examples/farmer/scenariodataWithTwoBundles/BelowAverageScenario.dat
 Creating instance for scenario=AverageScenario
-Data for scenario=AverageScenario loads from file=[base]/examples/pysp/farmer/scenariodataWithTwoBundles/AverageScenario.dat
+Data for scenario=AverageScenario loads from file=[base]/examples/farmer/scenariodataWithTwoBundles/AverageScenario.dat
 Creating instance for scenario=AboveAverageScenario
-Data for scenario=AboveAverageScenario loads from file=[base]/examples/pysp/farmer/scenariodataWithTwoBundles/AboveAverageScenario.dat
+Data for scenario=AboveAverageScenario loads from file=[base]/examples/farmer/scenariodataWithTwoBundles/AboveAverageScenario.dat
 Time to construct scenario instances=0.04 seconds
 Time link scenario tree with instances=0.00 seconds
 Constructing solver manager of type=serial

@@ -110,9 +110,9 @@ Initializing ScenarioTreeManagerClientSerial with options:
  - output_instance_construction_time: False
  -        compile_scenario_instances: False
  -                      output_times: False
- *                    model_location: [base]/examples/pysp/sizes/models
+ *                    model_location: [base]/examples/sizes/models
  -                   model_directory: None (DEPRECATED)
- *            scenario_tree_location: [base]/examples/pysp/sizes/SIZES3
+ *            scenario_tree_location: [base]/examples/sizes/SIZES3
  -                instance_directory: None (DEPRECATED)
  -       objective_sense_stage_based: None
  -        postinit_callback_location: ()
@@ -151,11 +151,11 @@ Initializing ScenarioTreeManagerClientSerial with options:
 Constructing scenario tree instances
 Scenario-based instance initialization enabled
 Creating instance for scenario=Scenario1
-Data for scenario=Scenario1 loads from file=[base]/examples/pysp/sizes/SIZES3/Scenario1.dat
+Data for scenario=Scenario1 loads from file=[base]/examples/sizes/SIZES3/Scenario1.dat
 Creating instance for scenario=Scenario2
-Data for scenario=Scenario2 loads from file=[base]/examples/pysp/sizes/SIZES3/Scenario2.dat
+Data for scenario=Scenario2 loads from file=[base]/examples/sizes/SIZES3/Scenario2.dat
 Creating instance for scenario=Scenario3
-Data for scenario=Scenario3 loads from file=[base]/examples/pysp/sizes/SIZES3/Scenario3.dat
+Data for scenario=Scenario3 loads from file=[base]/examples/sizes/SIZES3/Scenario3.dat
 Time to construct scenario instances=0.05 seconds
 Linking instances into scenario tree
 Time link scenario tree with instances=0.01 seconds

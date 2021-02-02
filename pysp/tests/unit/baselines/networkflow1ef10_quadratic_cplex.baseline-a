@@ -1,9 +1,9 @@
-Importing module=[base]/examples/pysp/networkflow/config/rhosettermixed.py
+Importing module=[base]/examples/networkflow/config/rhosettermixed.py
 Module successfully loaded
 Initializing PH
 
 Executing user rho setter callback function
-WW PH Extension: Loading user-specified configuration from file=[base]/examples/pysp/networkflow/config/wwph-immediatefixing.cfg
+WW PH Extension: Loading user-specified configuration from file=[base]/examples/networkflow/config/wwph-immediatefixing.cfg
 Starting PH
 
 Initiating PH iteration=0

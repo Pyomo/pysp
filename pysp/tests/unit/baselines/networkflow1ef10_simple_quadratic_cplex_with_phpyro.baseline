@@ -1,4 +1,4 @@
-Importing module=[base]/examples/pysp/networkflow/config/rhosettermixed.py
+Importing module=[base]/examples/networkflow/config/rhosettermixed.py
 Module successfully loaded
 Client assigned dispatcher with URI=PYRO://127.0.0.1:42774/86fdc20117ba22e2f6b956a0fb8c965dd7
 Initializing PH

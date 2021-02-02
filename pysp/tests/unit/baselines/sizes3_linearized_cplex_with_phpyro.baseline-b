@@ -20,13 +20,13 @@ Listening for work from dispatcher...
 Attempting to find Pyro dispatcher object...
 Dispatcher Object URI: PYRO://134.253.194.1:7768/86fdc2011d4821230b4f10cbb5cca2072b
 This is client 7500@snotra.sandia.gov
-Importing module=[base]/examples/pysp/sizes/config/rhosetter.py
+Importing module=[base]/examples/sizes/config/rhosetter.py
 Module successfully loaded
 Initializing PH
 
 Transmitting user rho callback invocations to phsolverservers
-WW PH Extension: Loading user-specified configuration from file=[base]/examples/pysp/sizes/config/wwph.cfg
-WW PH Extension: Loading variable suffixes from file=[base]/examples/pysp/sizes/config/wwph.suffixes
+WW PH Extension: Loading user-specified configuration from file=[base]/examples/sizes/config/wwph.cfg
+WW PH Extension: Loading variable suffixes from file=[base]/examples/sizes/config/wwph.suffixes
 Starting PH
 
 Initiating PH iteration=0

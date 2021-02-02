@@ -1,9 +1,9 @@
 User-defined PH extension module=pyomo.pysp.plugins.phhistoryextension already imported - skipping
-Trying to import module=[base]/examples/pysp/farmer/config/aggregategetter.py
+Trying to import module=[base]/examples/farmer/config/aggregategetter.py
 Module successfully loaded
-Trying to import module=[base]/examples/pysp/farmer/config/rhosetter.py
+Trying to import module=[base]/examples/farmer/config/rhosetter.py
 Module successfully loaded
-Trying to import module=[base]/examples/pysp/farmer/config/boundsetter.py
+Trying to import module=[base]/examples/farmer/config/boundsetter.py
 Module successfully loaded
 Initializing PH
 

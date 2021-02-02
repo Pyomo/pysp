@@ -1,8 +1,8 @@
-Importing module=[base]/examples/pysp/networkflow/config/aggregategetter.py
+Importing module=[base]/examples/networkflow/config/aggregategetter.py
 Module successfully loaded
-Importing module=[base]/examples/pysp/networkflow/config/rhosettermixed.py
+Importing module=[base]/examples/networkflow/config/rhosettermixed.py
 Module successfully loaded
-Importing module=[base]/examples/pysp/networkflow/config/xboundsetter.py
+Importing module=[base]/examples/networkflow/config/xboundsetter.py
 Module successfully loaded
 Client assigned dispatcher with URI=PYRO::PyUtilibServer.dispatcher.832e2483-57d6-4b90-ada3-693a4e778de3@localhost:49079
 Initializing PH
@@ -11,8 +11,8 @@ Transmitting user aggregate callback invocations to phsolverservers
 Broadcasting final aggregate data to phsolverservers
 Transmitting user rho callback invocations to phsolverservers
 Transmitting user bound callback invocations to phsolverservers
-WW PH Extension: Loading user-specified configuration from file=[base]/examples/pysp/networkflow/config/wwph-aggressivefixing.cfg
-WW PH Extension: Loading variable suffixes from file=[base]/examples/pysp/networkflow/config/wwph.suffixes
+WW PH Extension: Loading user-specified configuration from file=[base]/examples/networkflow/config/wwph-aggressivefixing.cfg
+WW PH Extension: Loading variable suffixes from file=[base]/examples/networkflow/config/wwph.suffixes
 Starting PH
 
 Initiating PH iteration=0

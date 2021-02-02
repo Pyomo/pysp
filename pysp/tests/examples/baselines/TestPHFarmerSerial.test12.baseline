@@ -5,8 +5,8 @@ Initializing PH
 convexhullboundextension using default update interval=1
 WARNING: No construction rule or expression specified for constraint 'W_Balance'
 WARNING: No construction rule or expression specified for constraint 'V_Bound'
-WW PH Extension: Loading user-specified configuration from file=[base]/examples/pysp/farmer/config/wwph.cfg
-WW PH Extension: Loading variable suffixes from file=[base]/examples/pysp/farmer/config/wwph.suffixes
+WW PH Extension: Loading user-specified configuration from file=[base]/examples/farmer/config/wwph.cfg
+WW PH Extension: Loading variable suffixes from file=[base]/examples/farmer/config/wwph.suffixes
 User-defined PH solution writer module=pyomo.pysp.plugins.jsonsolutionwriter already imported - skipping
 Starting PH
 

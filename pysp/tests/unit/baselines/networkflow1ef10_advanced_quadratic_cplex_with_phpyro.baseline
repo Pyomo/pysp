@@ -1,10 +1,10 @@
-Importing module=[base]/examples/pysp/networkflow/config/rhosettermixed.py
+Importing module=[base]/examples/networkflow/config/rhosettermixed.py
 Module successfully loaded
 Client assigned dispatcher with URI=PYRO://127.0.0.1:36879/86fdc20177a622e2f4ca4fa58ad8689466
 Initializing PH
 
 Transmitting user rho callback invocations to phsolverservers
-WW PH Extension: Loading user-specified configuration from file=[base]/examples/pysp/networkflow/config/wwph-mipgaponly.cfg
+WW PH Extension: Loading user-specified configuration from file=[base]/examples/networkflow/config/wwph-mipgaponly.cfg
 Starting PH
 
 Initiating PH iteration=0
