@@ -41,4 +41,7 @@ import pysp.convert
 import pysp.solvers
 import pysp.benders
 
+from pysp.plugins import load as _load_plugins
+_load_plugins()
+
 PluginGlobals.pop_env()
