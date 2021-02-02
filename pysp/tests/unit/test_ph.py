@@ -77,6 +77,7 @@ def filter_time_and_data_dirs(line):
            ("instance_directory: " in line) or \
            line.startswith("Freeing MIP data") or \
            line.startswith("Freeing QP data") or \
+           line.startswith("Restricted license") or \
            line.startswith("At least one sub-problem solve time was undefined")
 
 def filter_lagrange(line):
