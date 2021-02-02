@@ -16,7 +16,6 @@ import sys
 import os
 from pyomo.environ import SolverFactory, TerminationCondition
 import pysp.util.rapper as rapper
-import pyomo as pyomoroot
 
 __author__ = 'David L. Woodruff <DLWoodruff@UCDavis.edu>'
 __version__ = 1.5
@@ -30,13 +29,9 @@ class Test_abstract_rapper(unittest.TestCase):
     def setUp(self):
         """ Get ready for tests"""
 
-        p = str(pyomoroot.__path__)
-        l = p.find("'")
-        r = p.find("'", l+1)
-        pyomorootpath = p[l+1:r]
-        farmpath = pyomorootpath + os.sep + ".." + os.sep + "examples" + \
-                   os.sep + "pysp" + os.sep + "farmer"
-        farmpath = os.path.abspath(farmpath)
+        farmpath = os.path.join(
+            os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(
+                os.path.abspath(__file__))))), "examples", "farmer")
         
         # for AbstractModels
         self.farmer_ReferencePath = farmpath + os.sep + \
