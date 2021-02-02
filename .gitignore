@@ -1,0 +1,26 @@
+# IDE configuration files
+.idea
+.spyder*
+.ropeproject
+.vscode
+# Python generates numerous files when byte compiling / installing packages
+*.pyx
+*.pyc
+*.pyo
+*.egg-info
+
+# Documentation builds
+doc/OnlineDocs/_build
+doc/OnlineDocs/**/*.spy
+
+# Running pyomo / tests / solvers occasionally leaves extra files
+*.out
+pyomo/dataportal/parse_table_datacmds.py
+gurobi.log
+
+# Results from nosetests --with-coverage
+.coverage
+*.cover
+
+# Jupyterhub/Jupyterlab checkpoints
+.ipynb_checkpoints
