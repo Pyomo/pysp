@@ -306,95 +306,6 @@ jobs:
         echo "$IPOPT_DIR"
         ls -l $IPOPT_DIR
 
-    - name: Install GAMS
-      if: ${{ ! matrix.slim }}
-      # We install using Powershell because the GAMS installer hangs
-      # when launched from bash on Windows
-      shell: pwsh
-      run: |
-        $GAMS_DIR = "${env:TPL_DIR}/gams"
-        echo "$GAMS_DIR" | `
-            Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
-        echo "LD_LIBRARY_PATH=${env:LD_LIBRARY_PATH}:$GAMS_DIR" `
-            Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
-        echo "DYLD_LIBRARY_PATH=${env:DYLD_LIBRARY_PATH}:$GAMS_DIR" `
-            Out-File -FilePath $env:GITHUB_ENV -Encoding utf8 -Append
-        $INSTALLER = "${env:DOWNLOAD_DIR}/gams_install.exe"
-        $URL = "https://d37drm4t2jghv5.cloudfront.net/distributions/29.1.0"
-        if ( "${{matrix.TARGET}}" -eq "win" ) {
-            $URL = "$URL/windows/windows_x64_64.exe"
-        } elseif ( "${{matrix.TARGET}}" -eq "osx" ) {
-            $URL = "$URL/macosx/osx_x64_64_sfx.exe"
-        } else {
-            $URL = "$URL/linux/linux_x64_64_sfx.exe"
-        }
-        if (-not (Test-Path "$INSTALLER" -PathType Leaf)) {
-            echo "...downloading GAMS"
-            Invoke-WebRequest -Uri "$URL" -OutFile "$INSTALLER"
-        }
-        echo "...installing GAMS"
-        if ( "${{matrix.TARGET}}" -eq "win" ) {
-            Start-Process -FilePath "$INSTALLER" -ArgumentList `
-                "/SP- /NORESTART /VERYSILENT /DIR=$GAMS_DIR /NOICONS" `
-                -Wait
-        } else {
-            chmod 777 $INSTALLER
-            Start-Process -FilePath "$INSTALLER" -ArgumentList `
-                "-q -d $GAMS_DIR" -Wait
-            mv $GAMS_DIR/*/* $GAMS_DIR/.
-        }
-        echo ""
-        echo "$GAMS_DIR"
-        ls -l $GAMS_DIR
-
-    - name: Install GAMS Python bindings
-      if: ${{ ! matrix.slim }}
-      run: |
-        GAMS_DIR="${env:TPL_DIR}/gams"
-        py_ver=$($PYTHON_EXE -c 'import sys;v="_%s%s" % sys.version_info[:2] \
-            ;print(v if v != "_27" else "")')
-        if test -e $GAMS_DIR/apifiles/Python/api$py_ver; then
-            echo "Installing GAMS Python bindings"
-            pushd $GAMS_DIR/apifiles/Python/api$py_ver
-            $PYTHON_EXE setup.py install
-            popd
-        fi
-
-    - name: Install BARON
-      if: ${{ ! matrix.slim }}
-      shell: pwsh
-      run: |
-        $BARON_DIR = "${env:TPL_DIR}/baron"
-        echo "$BARON_DIR" | `
-            Out-File -FilePath $env:GITHUB_PATH -Encoding utf8 -Append
-        $URL = "https://www.minlp.com/downloads/xecs/baron/current/"
-        if ( "${{matrix.TARGET}}" -eq "win" ) {
-            $INSTALLER = "${env:DOWNLOAD_DIR}/baron_install.exe"
-            $URL += "baron-win64.exe"
-        } elseif ( "${{matrix.TARGET}}" -eq "osx" ) {
-            $INSTALLER = "${env:DOWNLOAD_DIR}/baron_install.zip"
-            $URL += "baron-osx64.zip"
-        } else {
-            $INSTALLER = "${env:DOWNLOAD_DIR}/baron_install.zip"
-            $URL += "baron-lin64.zip"
-        }
-        if (-not (Test-Path "$INSTALLER" -PathType Leaf)) {
-            echo "...downloading BARON ($URL)"
-            Invoke-WebRequest -Uri "$URL" -OutFile "$INSTALLER"
-        }
-        echo "...installing BARON"
-        if ( "${{matrix.TARGET}}" -eq "win" ) {
-            Start-Process -FilePath "$INSTALLER" -ArgumentList `
-                "/SP- /NORESTART /VERYSILENT /DIR=$BARON_DIR /NOICONS" `
-                -Wait
-        } else {
-            unzip -q $INSTALLER
-            mv baron-* $BARON_DIR
-        }
-        echo ""
-        echo "$BARON_DIR"
-        ls -l $BARON_DIR
-
     - name: Install GJH_ASL_JSON
       if: ${{ ! matrix.slim && matrix.TARGET != 'win' }}
       run: |
@@ -457,17 +368,6 @@ jobs:
         echo "Python site-packages: $SITE_PACKAGES"
         echo 'import coverage; coverage.process_startup()' \
             > ${SITE_PACKAGES}/run_coverage_at_startup.pth
-
-    - name: Download and install extensions
-      run: |
-        echo ""
-        echo "Pyomo download-extensions"
-        echo ""
-        pyomo download-extensions
-        echo ""
-        echo "Pyomo build-extensions"
-        echo ""
-        pyomo build-extensions --parallel 2
 
     - name: Report pyomo plugin information
       run: |
