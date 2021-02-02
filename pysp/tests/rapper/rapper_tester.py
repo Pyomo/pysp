@@ -20,7 +20,6 @@ from pyomo.environ import SolverFactory, TerminationCondition
 import pysp.util.rapper as rapper
 from pysp.scenariotree.tree_structure_model import CreateAbstractScenarioTreeModel
 import pysp.plugins.csvsolutionwriter as csvw
-import pyomo as pyomoroot
 try:
     import networkx
     havenetx = True
@@ -49,13 +48,9 @@ class Testrapper(unittest.TestCase):
         self.savecwd = os.getcwd()
         os.chdir(self.tdir)
 
-        p = str(pyomoroot.__path__)
-        l = p.find("'")
-        r = p.find("'", l+1)
-        pyomorootpath = p[l+1:r]
-        farmpath = pyomorootpath + os.sep + ".." + os.sep + "examples" + \
-                   os.sep + "farmer"
-        farmpath = os.path.abspath(farmpath)
+        farmpath = os.path.join(
+            os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(
+                os.path.abspath(__file__))))), "examples", "farmer")
         
         self.farmer_concrete_file = farmpath + os.sep + \
                                     "concrete" + os.sep + "ReferenceModel.py"
