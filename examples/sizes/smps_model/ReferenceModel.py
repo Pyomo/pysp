@@ -15,7 +15,7 @@
 
 
 from pyomo.core import *
-from pyomo.pysp.annotations import StochasticConstraintBoundsAnnotation
+from pysp.annotations import StochasticConstraintBoundsAnnotation
 
 #
 # Model

@@ -4,7 +4,7 @@ Broadcast server listening on: ('0.0.0.0', 9090)
 URI is: PYRO://10.0.0.9:9090/0a000009a2f020a962270805ecb328a7dd
 URI written to: [base]/pysp/tests/examples/Pyro_NS_URI
 Name Server started.
-User-defined PH extension module=pyomo.pysp.plugins.phhistoryextension already imported - skipping
+User-defined PH extension module=pysp.plugins.phhistoryextension already imported - skipping
 Trying to import module=[base]/examples/sizes/config/rhosetter.py
 Module successfully loaded
 Dispatcher is ready.
@@ -28,7 +28,7 @@ Initializing PH
 Transmitting user rho callback invocations to phsolverservers
 WW PH Extension: Loading user-specified configuration from file=[base]/examples/sizes/config/wwph.cfg
 WW PH Extension: Loading variable suffixes from file=[base]/examples/sizes/config/wwph.suffixes
-User-defined PH solution writer module=pyomo.pysp.plugins.jsonsolutionwriter already imported - skipping
+User-defined PH solution writer module=pysp.plugins.jsonsolutionwriter already imported - skipping
 Starting PH
 
 Initiating PH iteration=0

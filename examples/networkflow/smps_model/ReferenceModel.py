@@ -20,8 +20,8 @@
 # for use with pysp2smps conversion tool.
 
 from pyomo.core import *
-from pyomo.pysp.annotations import StochasticConstraintBodyAnnotation
-from pyomo.pysp.annotations import StochasticConstraintBoundsAnnotation
+from pysp.annotations import StochasticConstraintBodyAnnotation
+from pysp.annotations import StochasticConstraintBoundsAnnotation
 
 model = AbstractModel()
 

@@ -9,7 +9,7 @@
 #  ___________________________________________________________________________
 
 import pyomo.environ as pyo
-from pyomo.pysp.embeddedsp import (EmbeddedSP,
+from pysp.embeddedsp import (EmbeddedSP,
                                    StochasticDataAnnotation,
                                    TableDistribution,
                                    StageCostAnnotation,

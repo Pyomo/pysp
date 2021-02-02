@@ -28,29 +28,29 @@ from pyomo.core.base.var import Var, _VarData
 from pyomo.core.base.constraint import Constraint, _ConstraintData
 from pyomo.core.base.sos import SOSConstraint
 from pyomo.repn import generate_standard_repn
-from pyomo.pysp.scenariotree.manager import InvocationType
-from pyomo.pysp.embeddedsp import (EmbeddedSP,
+from pysp.scenariotree.manager import InvocationType
+from pysp.embeddedsp import (EmbeddedSP,
                                    TableDistribution)
-from pyomo.pysp.annotations import (locate_annotations,
+from pysp.annotations import (locate_annotations,
                                     StochasticConstraintBoundsAnnotation,
                                     StochasticConstraintBodyAnnotation,
                                     StochasticObjectiveAnnotation,
                                     StochasticVariableBoundsAnnotation)
-from pyomo.pysp.util.config import (PySPConfigValue,
+from pysp.util.config import (PySPConfigValue,
                                     PySPConfigBlock,
                                     safe_register_common_option,
                                     safe_register_unique_option,
                                     _domain_must_be_str)
-from pyomo.pysp.scenariotree.manager import \
+from pysp.scenariotree.manager import \
     (ScenarioTreeManagerClientSerial,
      ScenarioTreeManagerClientPyro)
-from pyomo.pysp.util.misc import launch_command
+from pysp.util.misc import launch_command
 
 from six import iteritems, itervalues
 
 thisfile = os.path.abspath(__file__)
 
-logger = logging.getLogger('pyomo.pysp')
+logger = logging.getLogger('pysp')
 
 # LONG TERM TODO:
 #  - Multi-stage?
@@ -1873,7 +1873,7 @@ def _convert_embedded(output_directory,
                             "Invalid distribution type '%s' for stochastic "
                             "parameter '%s'. The embedded SMPS writer currently "
                             "only supports discrete table distributions of type "
-                            "pyomo.pysp.embeddedsp.TableDistribution."
+                            "pysp.embeddedsp.TableDistribution."
                             % (distribution.__class__.__name__,
                                paramdata.name))
                     if not isinstance(var, _VarData):
@@ -2029,7 +2029,7 @@ def _convert_embedded(output_directory,
                             "Invalid distribution type '%s' for stochastic "
                             "parameter '%s'. The embedded SMPS writer currently "
                             "only supports discrete table distributions of type "
-                            "pyomo.pysp.embeddedsp.TableDistribution."
+                            "pysp.embeddedsp.TableDistribution."
                             % (distribution.__class__.__name__,
                                paramdata.name))
                     assert len(distribution.values) > 0
@@ -2266,7 +2266,7 @@ def main(args=None):
     options.get('compile_scenario_instances')._argparse = None
 
     try:
-        ap = argparse.ArgumentParser(prog='pyomo.pysp.convert.smps')
+        ap = argparse.ArgumentParser(prog='pysp.convert.smps')
         options.initialize_argparse(ap)
 
         # restore the option so the class validation does not
@@ -2281,7 +2281,7 @@ def main(args=None):
 
     return launch_command(run_convertsmps,
                           options,
-                          error_label="pyomo.pysp.convert.smps: ",
+                          error_label="pysp.convert.smps: ",
                           disable_gc=options.disable_gc,
                           profile_count=options.profile,
                           traceback=options.traceback)

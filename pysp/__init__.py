@@ -11,34 +11,34 @@
 from pyomo.common.plugin import PluginGlobals
 PluginGlobals.add_env("pyomo")
 
-import pyomo.pysp.annotations
-import pyomo.pysp.solutionioextensions
-import pyomo.pysp.util
-#import pyomo.pysp.ef_vss
-import pyomo.pysp.phsolverserverutils
-import pyomo.pysp.solutionwriter
-import pyomo.pysp.phextension
-import pyomo.pysp.phutils
-import pyomo.pysp.dualphmodel
-import pyomo.pysp.generators
-import pyomo.pysp.convergence
-import pyomo.pysp.scenariotree
-import pyomo.pysp.phobjective
-import pyomo.pysp.embeddedsp
+import pysp.annotations
+import pysp.solutionioextensions
+import pysp.util
+#import pysp.ef_vss
+import pysp.phsolverserverutils
+import pysp.solutionwriter
+import pysp.phextension
+import pysp.phutils
+import pysp.dualphmodel
+import pysp.generators
+import pysp.convergence
+import pysp.scenariotree
+import pysp.phobjective
+import pysp.embeddedsp
 
-import pyomo.pysp.ef
-import pyomo.pysp.ph
-import pyomo.pysp.lagrangeutils
+import pysp.ef
+import pysp.ph
+import pysp.lagrangeutils
 
-import pyomo.pysp.phsolverserver
-import pyomo.pysp.ef_writer_script
-import pyomo.pysp.phinit
-import pyomo.pysp.computeconf
-import pyomo.pysp.drive_lagrangian_cc
-import pyomo.pysp.lagrangeMorePR
-import pyomo.pysp.lagrangeParam
-import pyomo.pysp.convert
-import pyomo.pysp.solvers
-import pyomo.pysp.benders
+import pysp.phsolverserver
+import pysp.ef_writer_script
+import pysp.phinit
+import pysp.computeconf
+import pysp.drive_lagrangian_cc
+import pysp.lagrangeMorePR
+import pysp.lagrangeParam
+import pysp.convert
+import pysp.solvers
+import pysp.benders
 
 PluginGlobals.pop_env()

@@ -13,10 +13,10 @@ import copy
 import math
 
 from pyomo.common.plugin import implements, alias, SingletonPlugin
-from pyomo.pysp import phextension
-from pyomo.pysp.phutils import indexToString
+from pysp import phextension
+from pysp.phutils import indexToString
 
-logger = logging.getLogger('pyomo.pysp')
+logger = logging.getLogger('pysp')
 
 class _AdaptiveRhoBase(object):
 

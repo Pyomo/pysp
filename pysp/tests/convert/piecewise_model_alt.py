@@ -9,7 +9,7 @@
 #  ___________________________________________________________________________
 
 from pyomo.core import Constraint
-from pyomo.pysp.annotations import (StochasticConstraintBoundsAnnotation,
+from pysp.annotations import (StochasticConstraintBoundsAnnotation,
                                     StochasticConstraintBodyAnnotation,
                                     StochasticObjectiveAnnotation)
 

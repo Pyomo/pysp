@@ -21,10 +21,10 @@ thisfile = os.path.abspath(__file__)
 
 
 from pyomo.core.base import Var, TextLabeler, Expression, Piecewise, _PiecewiseData, SOSConstraint, Constraint, components_data
-from pyomo.pysp.plugins.ddextensionnew import (MatrixEntriesClass,
+from pysp.plugins.ddextensionnew import (MatrixEntriesClass,
                                                LPFileObjClass,
                                                LPFileConstraintClass)
-from pyomo.pysp.phutils import create_block_symbol_maps
+from pysp.phutils import create_block_symbol_maps
 from pyomo.solvers.plugins.smanager.phpyro import SolverManager_PHPyro
 
 from six import iteritems

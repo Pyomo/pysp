@@ -12,9 +12,9 @@ import os
 import pickle # so we can send index across with its type (I hope)
 
 import pyomo.common.plugin
-from pyomo.pysp import phextension
+from pysp import phextension
 import pyomo.solvers.plugins.smanager.phpyro
-from pyomo.pysp import phsolverserverutils
+from pysp import phsolverserverutils
 
 from six import iteritems
 

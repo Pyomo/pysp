@@ -15,13 +15,13 @@ from os.path import join, dirname, abspath, exists
 import pyutilib.th as unittest
 
 from pyomo.common.dependencies import yaml_available
-from pyomo.pysp.scenariotree.instance_factory import \
+from pysp.scenariotree.instance_factory import \
     ScenarioTreeInstanceFactory
-from pyomo.pysp.scenariotree.tree_structure_model import \
+from pysp.scenariotree.tree_structure_model import \
     CreateAbstractScenarioTreeModel
-from pyomo.pysp.scenariotree.tree_structure import \
+from pysp.scenariotree.tree_structure import \
     ScenarioTree
-from pyomo.pysp.util.misc import load_external_module
+from pysp.util.misc import load_external_module
 
 try:
     import networkx

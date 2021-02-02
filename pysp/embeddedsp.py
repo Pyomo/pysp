@@ -26,7 +26,7 @@ from pyomo.core.base.constraint import (Constraint,
                                         _ConstraintData)
 from pyomo.core.base.sos import SOSConstraint
 from pyomo.core.base.param import _ParamData
-from pyomo.pysp.annotations import (locate_annotations,
+from pysp.annotations import (locate_annotations,
                                     StageCostAnnotation,
                                     VariableStageAnnotation,
                                     StochasticDataAnnotation,
@@ -34,14 +34,14 @@ from pyomo.pysp.annotations import (locate_annotations,
                                     StochasticConstraintBodyAnnotation,
                                     StochasticObjectiveAnnotation,
                                     StochasticVariableBoundsAnnotation)
-from pyomo.pysp.scenariotree import tree_structure
-from pyomo.pysp.scenariotree.tree_structure_model import \
+from pysp.scenariotree import tree_structure
+from pysp.scenariotree.tree_structure_model import \
     CreateAbstractScenarioTreeModel
-from pyomo.pysp.scenariotree.manager import \
+from pysp.scenariotree.manager import \
     InvocationType
-from pyomo.pysp.scenariotree.instance_factory import \
+from pysp.scenariotree.instance_factory import \
     ScenarioTreeInstanceFactory
-from pyomo.pysp.scenariotree.manager import \
+from pysp.scenariotree.manager import \
     (ScenarioTreeManagerClientSerial,
      ScenarioTreeManagerClientPyro)
 

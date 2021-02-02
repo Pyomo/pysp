@@ -12,7 +12,7 @@ import json
 import sys
 import os
 
-from pyomo.pysp.tests.examples.ph_checker import \
+from pysp.tests.examples.ph_checker import \
     _update_exception_message, \
     assert_value_equals, \
     assert_float_equals, \

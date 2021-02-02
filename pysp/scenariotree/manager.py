@@ -33,20 +33,20 @@ from pyomo.opt import (UndefinedData,
                        TerminationCondition,
                        SolutionStatus)
 from pyomo.opt.parallel.manager import ActionHandle
-from pyomo.pysp.util.configured_object import PySPConfiguredObject
-from pyomo.pysp.util.config import (PySPConfigBlock,
+from pysp.util.configured_object import PySPConfiguredObject
+from pysp.util.config import (PySPConfigBlock,
                                     safe_declare_common_option,
                                     safe_register_common_option,
                                     _domain_must_be_str,
                                     _domain_tuple_of_str)
-from pyomo.pysp.util.misc import load_external_module
-from pyomo.pysp.scenariotree.instance_factory import \
+from pysp.util.misc import load_external_module
+from pysp.scenariotree.instance_factory import \
     ScenarioTreeInstanceFactory
-from pyomo.pysp.scenariotree.action_manager_pyro \
+from pysp.scenariotree.action_manager_pyro \
     import ScenarioTreeActionManagerPyro
-from pyomo.pysp.scenariotree.server_pyro \
+from pysp.scenariotree.server_pyro \
     import ScenarioTreeServerPyro
-from pyomo.pysp.ef import create_ef_instance
+from pysp.ef import create_ef_instance
 
 import six
 from six import (iteritems,
@@ -55,7 +55,7 @@ from six import (iteritems,
                  string_types)
 from six.moves import xrange
 
-logger = logging.getLogger('pyomo.pysp')
+logger = logging.getLogger('pysp')
 
 class _InvocationTypeMeta(type):
     def __contains__(cls, obj):
@@ -663,7 +663,7 @@ if using_pyro4:
     from Pyro4.util import SerializerBase
     # register hooks for ScenarioTreeSolveResults
     def ScenarioTreeSolveResults_to_dict(obj):
-        data = {"__class__": ("pyomo.pysp.scenario_tree.manager_solver."
+        data = {"__class__": ("pysp.scenario_tree.manager_solver."
                               "ScenarioTreeSolveResults")}
         data.update(obj.__dict__)
         # Convert enums to strings to avoid difficult
@@ -700,7 +700,7 @@ if using_pyro4:
         ScenarioTreeSolveResults,
         ScenarioTreeSolveResults_to_dict)
     SerializerBase.register_dict_to_class(
-        ("pyomo.pysp.scenario_tree.manager_solver."
+        ("pysp.scenario_tree.manager_solver."
          "ScenarioTreeSolveResults"),
         dict_to_ScenarioTreeSolveResults)
 
@@ -1004,7 +1004,7 @@ class ScenarioTreeManager(PySPConfiguredObject):
             invocation_type:
                  Controls how the function is invoked. Refer
                  to the doc string for
-                 pyomo.pysp.scenariotree.manager.InvocationType
+                 pysp.scenariotree.manager.InvocationType
                  for more information.
             function_args:
                  Extra arguments passed to the function when
@@ -1439,7 +1439,7 @@ class ScenarioTreeManagerClient(ScenarioTreeManager,
             invocation_type:
                  Controls how the function is invoked. Refer
                  to the doc string for
-                 pyomo.pysp.scenariotree.manager.InvocationType
+                 pysp.scenariotree.manager.InvocationType
                  for more information.
             function_args:
                  Extra arguments passed to the function when

@@ -9,10 +9,10 @@
 #  ___________________________________________________________________________
 import pyutilib.th as unittest
 
-from pyomo.pysp.scenariotree.tree_structure_model import \
+from pysp.scenariotree.tree_structure_model import \
     (ScenarioTreeModelFromNetworkX,
      CreateConcreteTwoStageScenarioTreeModel)
-from pyomo.pysp.scenariotree.tree_structure import ScenarioTree
+from pysp.scenariotree.tree_structure import ScenarioTree
 from pyomo.core import (ConcreteModel,
                         Set,
                         Var,

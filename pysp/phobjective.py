@@ -16,7 +16,7 @@ from six.moves import xrange
 import sys
 
 from pyomo.core import Set, Constraint, Expression, BooleanSet, value
-from pyomo.pysp.phutils import indexToString
+from pysp.phutils import indexToString
 
 # IMPT: In general, the breakpoint computation codes can return a
 #       2-list even if the lb equals the ub. This case happens quite

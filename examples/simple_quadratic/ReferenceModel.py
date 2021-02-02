@@ -23,7 +23,7 @@ scenario_data['Scenario3'] = (0.6, 0.1)
 scenario_data['Scenario4'] = (1.1, -4.4)
 
 def pysp_scenario_tree_model_callback():
-    from pyomo.pysp.scenariotree.tree_structure_model \
+    from pysp.scenariotree.tree_structure_model \
         import CreateConcreteTwoStageScenarioTreeModel
 
     st_model = CreateConcreteTwoStageScenarioTreeModel(len(scenario_data))

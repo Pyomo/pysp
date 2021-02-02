@@ -12,14 +12,14 @@ __all__ = ()
 
 import json
 
-from pyomo.pysp.solutionioextensions import \
+from pysp.solutionioextensions import \
     (IPySPSolutionSaverExtension,
      IPySPSolutionLoaderExtension)
-from pyomo.pysp.phutils import indexToString
+from pysp.phutils import indexToString
 from pyomo.common.plugin import implements, SingletonPlugin
-from pyomo.pysp.util.config import (PySPConfigBlock,
+from pysp.util.config import (PySPConfigBlock,
                                     safe_declare_common_option)
-from pyomo.pysp.util.configured_object import (PySPConfiguredObject,
+from pysp.util.configured_object import (PySPConfiguredObject,
                                                PySPConfiguredExtension)
 
 try:

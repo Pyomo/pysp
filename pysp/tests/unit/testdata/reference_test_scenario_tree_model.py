@@ -11,7 +11,7 @@
 import os
 import tempfile
 
-from pyomo.pysp.scenariotree.tree_structure_model import \
+from pysp.scenariotree.tree_structure_model import \
     CreateAbstractScenarioTreeModel
 
 with tempfile.NamedTemporaryFile(mode="w", suffix=".dat", delete=False) as f:

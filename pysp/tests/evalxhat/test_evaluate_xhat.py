@@ -16,7 +16,7 @@ import shutil
 
 import pyutilib.th as unittest
 from pyutilib.pyro import using_pyro3, using_pyro4
-from pyomo.pysp.util.misc import (_get_test_nameserver,
+from pysp.util.misc import (_get_test_nameserver,
                                   _get_test_dispatcher,
                                   _poll,
                                   _kill)
@@ -102,10 +102,10 @@ class _EvalXHATTesterBase(object):
             options['--verbose'] = None
         options['--output-times'] = None
         options['--traceback'] = None
-        options['--solution-loader-extension'] = 'pyomo.pysp.plugins.jsonio'
+        options['--solution-loader-extension'] = 'pysp.plugins.jsonio'
         options['--jsonloader-input-name'] = \
             join(thisdir, self.basename+'_ef_solution.json')
-        options['--solution-saver-extension'] = 'pyomo.pysp.plugins.jsonio'
+        options['--solution-saver-extension'] = 'pysp.plugins.jsonio'
 
         class_name, test_name = self.id().split('.')[-2:]
         options['--jsonsaver-output-name'] = \

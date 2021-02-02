@@ -40,7 +40,7 @@ runph_line = \
     "--ww-extension-cfgfile=config/wwph-fixlag10.cfg  \\\n" + \
     "--ww-extension-suffixfile=config/wwph.suffixes \\\n" + \
     "--default-rho=1 \\\n" +\
-    "--user-defined-extension=pyomo.pysp.plugins.phboundextension \\\n" + \
+    "--user-defined-extension=pysp.plugins.phboundextension \\\n" + \
     "--traceback  \\\n" + \
     "--xhat-method=config/xhatslam.yaml \\\n" +\
     "--solver-manager=phpyro --shutdown-pyro \\\n" +\

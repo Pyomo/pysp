@@ -154,7 +154,7 @@ This file is called test.bash in the release.
 EDIR=/export/home/dlwoodruff/software/pyomo/src/pyomo/examples/pysp/sizes
 
 python BBPH.py -i $EDIR/SIZES3 -m $EDIR/models --default-rho=1 \
---user-defined-extension=pyomo.pysp.plugins.phboundextension \
+--user-defined-extension=pysp.plugins.phboundextension \
 --traceback --BBPH-working-dir=workingdir --BBPH-ph-Script=testphscript.bash \
 --BBPH-ph-options-token=BBPHTOKEN --BBPH-Verbose \
 --BBPH-brancher-plugin=/export/home/dlwoodruff/Documents/phbb/code/brancher \
@@ -171,7 +171,7 @@ EDIR=/export/home/dlwoodruff/software/pyomo/src/pyomo/examples/pysp/sizes
 
 export PYRO_NS_PORT=9090
 runph -i $EDIR/SIZES3 -m $EDIR/models --default-rho=1 \
---user-defined-extension=pyomo.pysp.plugins.phboundextension BBPHTOKEN
+--user-defined-extension=pysp.plugins.phboundextension BBPHTOKEN
 \end{verbatim}
 
 Notice that BBPHTOKEN makes this script invalid if run directly, but 

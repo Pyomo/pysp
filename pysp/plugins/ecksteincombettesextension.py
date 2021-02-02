@@ -14,8 +14,8 @@ from six import iteritems, print_
 
 import random
 
-from pyomo.pysp import phextension
-from pyomo.pysp.convergence import ConvergenceBase
+from pysp import phextension
+from pysp.convergence import ConvergenceBase
 
 from pyomo.core.base import minimize
 

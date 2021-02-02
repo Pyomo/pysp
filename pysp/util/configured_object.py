@@ -14,7 +14,7 @@ import inspect
 from collections import defaultdict
 
 from pyomo.common.plugin import SingletonPlugin
-from pyomo.pysp.util.config import (PySPConfigBlock,
+from pysp.util.config import (PySPConfigBlock,
                                     safe_declare_option,
                                     check_options_match,
                                     safe_declare_common_option,

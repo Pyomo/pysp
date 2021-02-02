@@ -8,6 +8,6 @@
 #  This software is distributed under the 3-clause BSD License.
 #  ___________________________________________________________________________
 
-import pyomo.pysp.convert.schuripopt
-import pyomo.pysp.convert.smps
-import pyomo.pysp.convert.ddsip
+import pysp.convert.schuripopt
+import pysp.convert.smps
+import pysp.convert.ddsip

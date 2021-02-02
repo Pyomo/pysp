@@ -1,4 +1,4 @@
-User-defined PH extension module=pyomo.pysp.plugins.phhistoryextension already imported - skipping
+User-defined PH extension module=pysp.plugins.phhistoryextension already imported - skipping
 Trying to import module=[base]/examples/networkflow/config/aggregategetter.py
 Module successfully loaded
 Trying to import module=[base]/examples/networkflow/config/rhosetter0.5.py
@@ -11,7 +11,7 @@ Executing user aggregate getter callback function
 Executing user rho setter callback function
 Executing user bound setter callback function
 WW PH Extension: Loading user-specified configuration from file=[base]/examples/networkflow/config/wwph-aggressivefixing.cfg
-User-defined PH solution writer module=pyomo.pysp.plugins.jsonsolutionwriter already imported - skipping
+User-defined PH solution writer module=pysp.plugins.jsonsolutionwriter already imported - skipping
 Starting PH
 
 Initiating PH iteration=0

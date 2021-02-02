@@ -16,11 +16,11 @@ import random
 
 from pyomo.common.dependencies import yaml, yaml_load_args
 import pyomo.common.plugin
-from pyomo.pysp import phextension
-from pyomo.pysp.phutils import isVariableNameIndexed, extractVariableNameAndIndex, indexMatchesTemplate, indexToString
-from pyomo.pysp.phsolverserverutils import \
+from pysp import phextension
+from pysp.phutils import isVariableNameIndexed, extractVariableNameAndIndex, indexMatchesTemplate, indexToString
+from pysp.phsolverserverutils import \
     transmit_external_function_invocation_to_worker
-from pyomo.pysp.generators import \
+from pysp.generators import \
     scenario_tree_node_variables_generator_noinstances
 
 import six
@@ -371,7 +371,7 @@ class wwphextension(pyomo.common.plugin.SingletonPlugin):
                     transmit_external_function_invocation_to_worker(
                         ph,
                         object_name,
-                        "pyomo.pysp.plugins.wwphextension",
+                        "pysp.plugins.wwphextension",
                         "external_collect_variable_bounds",
                         return_action_handle=True,
                         function_args=function_args)

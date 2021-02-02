@@ -12,8 +12,8 @@ import sys
 import time
 
 from pyomo.core import minimize
-from pyomo.pysp.ef_writer_script import ExtensiveFormAlgorithm
-from pyomo.pysp.phinit import run_ph
+from pysp.ef_writer_script import ExtensiveFormAlgorithm
+from pysp.phinit import run_ph
 
 # Tear the scenario instances off the ef instance when it is no longer required
 # so warnings are not generated next time scenarios instances are placed inside

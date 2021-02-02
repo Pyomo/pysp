@@ -19,9 +19,9 @@ OnlyRootNode = True
 import sys
 
 from pyomo.common.plugin import implements, alias, SingletonPlugin
-from pyomo.pysp import phextension
-from pyomo.pysp.phutils import indexToString
-from pyomo.pysp.generators import \
+from pysp import phextension
+from pysp.phutils import indexToString
+from pysp.generators import \
     scenario_tree_node_variables_generator_noinstances
 
 #==================================================

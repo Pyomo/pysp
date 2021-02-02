@@ -27,11 +27,11 @@ except:
 import pyutilib.th as unittest
 from pyutilib.misc.comparison import open_possibly_compressed_file
 from pyomo.common.dependencies import yaml_available
-from pyomo.pysp.util.misc import (_get_test_nameserver,
+from pysp.util.misc import (_get_test_nameserver,
                                   _get_test_dispatcher,
                                   _poll,
                                   _kill)
-from pyomo.pysp.tests.examples.ph_checker import main as validate_ph_main
+from pysp.tests.examples.ph_checker import main as validate_ph_main
 from pyutilib.pyro import using_pyro3, using_pyro4
 
 
@@ -314,8 +314,8 @@ class PHTester(object):
         argstring = self.get_cmd_base()+" "\
                     "--model-directory="+self.model_directory+" "\
                     "--instance-directory="+self.instance_directory+" "\
-                    "--user-defined-extension=pyomo.pysp.plugins.phhistoryextension "\
-                    "--solution-writer=pyomo.pysp.plugins.jsonsolutionwriter "\
+                    "--user-defined-extension=pysp.plugins.phhistoryextension "\
+                    "--solution-writer=pysp.plugins.jsonsolutionwriter "\
                     +options_string+" "\
                     "&> "+join(thisDir,prefix+".out")
         print("Testing command("+basename(prefix)+"): " + argstring)
@@ -430,7 +430,7 @@ class PHTester(object):
 
 
         new_options_string = options_string+(" --user-defined-extension"
-                                             "=pyomo.pysp.plugins.phboundextension")
+                                             "=pysp.plugins.phboundextension")
         self._baseline_test(options_string=new_options_string,
                             validation_options_string=validation_options_string,
                             cleanup_func=_cleanup_func,
@@ -493,7 +493,7 @@ class PHTester(object):
 
         new_options_string = \
             options_string+(" --user-defined-extension"
-                            "=pyomo.pysp.plugins.convexhullboundextension "
+                            "=pysp.plugins.convexhullboundextension "
                             "--max-iteration=50")
         self._baseline_test(options_string=new_options_string,
                             validation_options_string=validation_options_string,

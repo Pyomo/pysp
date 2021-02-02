@@ -21,13 +21,13 @@ from pyomo.common.errors import ApplicationError
 
 from pyomo.opt import SolverManagerFactory
 
-from pyomo.pysp.scenariotree.instance_factory import \
+from pysp.scenariotree.instance_factory import \
    ScenarioTreeInstanceFactory
-from pyomo.pysp.phinit import (construct_ph_options_parser,
+from pysp.phinit import (construct_ph_options_parser,
                                GenerateScenarioTreeForPH,
                                PHFromScratch)
-from pyomo.pysp.phutils import find_active_objective
-from pyomo.pysp import lagrangeutils as lagrUtil
+from pysp.phutils import find_active_objective
+from pysp import lagrangeutils as lagrUtil
 
 #########################################
 def run(args=None):

@@ -13,5 +13,5 @@ __all__ = ("WorkerInitType",
            "ScenarioWorkerInit",
            "BundleWorkerInit")
 
-logger = logging.getLogger('pyomo.pysp')
+logger = logging.getLogger('pysp')
 

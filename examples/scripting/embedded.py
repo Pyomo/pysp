@@ -2,12 +2,12 @@ import time
 
 from pyomo.environ import *
 from pyomo.opt import TerminationCondition
-from pyomo.pysp.annotations import (StochasticDataAnnotation,
+from pysp.annotations import (StochasticDataAnnotation,
                                     StageCostAnnotation,
                                     VariableStageAnnotation)
-from pyomo.pysp.embeddedsp import (EmbeddedSP,
+from pysp.embeddedsp import (EmbeddedSP,
                                    UniformDistribution)
-from pyomo.pysp.solvers import SPSolverFactory
+from pysp.solvers import SPSolverFactory
 
 # make this example deterministic
 import random

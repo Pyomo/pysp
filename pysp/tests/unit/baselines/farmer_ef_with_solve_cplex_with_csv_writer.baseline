@@ -99,7 +99,7 @@ Initializing ScenarioTreeManagerClientSerial with options:
  -     output_scenario_tree_solution: False
  -          solution_saver_extension: ()
  -         solution_loader_extension: ()
- *                   solution_writer: ('pyomo.pysp.plugins.csvsolutionwriter',)
+ *                   solution_writer: ('pysp.plugins.csvsolutionwriter',)
  -                       output_file: efout
  *                             solve: True
  -             output_scenario_costs: None

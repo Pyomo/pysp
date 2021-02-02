@@ -1,3 +1,3 @@
 #
-# Examples for pyomo.pysp
+# Examples for pysp
 #

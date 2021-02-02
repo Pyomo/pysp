@@ -28,11 +28,11 @@ from pyomo.core.base.block import _BlockData
 from pyomo.common.dependencies import yaml, yaml_available, yaml_load_args
 from pyomo.common.gc_manager import PauseGC
 from pyomo.common.plugin import ExtensionPoint
-from pyomo.pysp.util.misc import load_external_module
-from pyomo.pysp.scenariotree.tree_structure_model import \
+from pysp.util.misc import load_external_module
+from pysp.scenariotree.tree_structure_model import \
     (CreateAbstractScenarioTreeModel,
      ScenarioTreeModelFromNetworkX)
-from pyomo.pysp.scenariotree.tree_structure import \
+from pysp.scenariotree.tree_structure import \
     ScenarioTree
 
 import six
@@ -41,7 +41,7 @@ from pyomo.common.dependencies import (
     networkx, networkx_available as has_networkx
 )
 
-logger = logging.getLogger('pyomo.pysp')
+logger = logging.getLogger('pysp')
 
 def _extract_pathspec(
         pathspec,

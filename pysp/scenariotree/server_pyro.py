@@ -26,23 +26,23 @@ except:                                           #pragma:nocover
 from pyomo.common.collections import Bunch
 from pyomo.common.dependencies import attempt_import, dill, dill_available
 from pyomo.common import pyomo_command
-from pyomo.pysp.util.misc import (parse_command_line,
+from pysp.util.misc import (parse_command_line,
                                   launch_command,
                                   load_external_module)
-from pyomo.pysp.util.config import (PySPConfigValue,
+from pysp.util.config import (PySPConfigValue,
                                     PySPConfigBlock,
                                     safe_register_common_option,
                                     safe_register_unique_option,
                                     _domain_tuple_of_str)
-from pyomo.pysp.scenariotree.tree_structure import \
+from pysp.scenariotree.tree_structure import \
     ScenarioTree
-from pyomo.pysp.scenariotree.instance_factory import \
+from pysp.scenariotree.instance_factory import \
     ScenarioTreeInstanceFactory
 
 pyu_pyro = attempt_import('pyutilib.pyro', alt_names=['pyu_pyro'])[0]
 Pyro4 = attempt_import('Pyro4')[0]
 
-logger = logging.getLogger('pyomo.pysp')
+logger = logging.getLogger('pysp')
 
 class ScenarioTreeServerPyro(pyu_pyro.TaskWorker):
 

@@ -15,11 +15,11 @@ import copy
 import pyomo.common.plugin
 from pyomo.opt import SolverFactory
 from pyomo.core import ConcreteModel, Var, Reals, Param, Objective, ConstraintList, minimize
-from pyomo.pysp import phextension
-from pyomo.pysp.plugins.phboundextension import (_PHBoundBase,
+from pysp import phextension
+from pysp.plugins.phboundextension import (_PHBoundBase,
                                                  ExtractInternalNodeSolutionsforInner)
 
-logger = logging.getLogger('pyomo.pysp')
+logger = logging.getLogger('pysp')
 
 class convexhullboundextension(pyomo.common.plugin.SingletonPlugin, _PHBoundBase):
 

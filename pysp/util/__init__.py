@@ -8,6 +8,6 @@
 #  This software is distributed under the 3-clause BSD License.
 #  ___________________________________________________________________________
 
-import pyomo.pysp.util.config
-import pyomo.pysp.util.configured_object
-import pyomo.pysp.util.misc
+import pysp.util.config
+import pysp.util.configured_object
+import pysp.util.misc

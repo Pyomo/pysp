@@ -9,7 +9,7 @@
 #  ___________________________________________________________________________
 
 from pyomo.common.plugin import implements, SingletonPlugin
-from pyomo.pysp import phextension
+from pysp import phextension
 
 from pyomo.core import Suffix
 from pyomo.opt import WriterFactory

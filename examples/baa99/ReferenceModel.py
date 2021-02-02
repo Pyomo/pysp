@@ -13,7 +13,7 @@
 
 import itertools
 
-from pyomo.pysp.annotations import StochasticConstraintBoundsAnnotation
+from pysp.annotations import StochasticConstraintBoundsAnnotation
 
 #
 # Import the reference model
@@ -41,7 +41,7 @@ scenario_data = dict(('Scenario'+str(i), (d1val, d2val))
                                                  model.d2_rhs_table), 1))
 
 def pysp_scenario_tree_model_callback():
-    from pyomo.pysp.scenariotree.tree_structure_model import \
+    from pysp.scenariotree.tree_structure_model import \
         CreateConcreteTwoStageScenarioTreeModel
 
     st_model = CreateConcreteTwoStageScenarioTreeModel(num_scenarios)

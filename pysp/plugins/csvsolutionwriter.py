@@ -9,8 +9,8 @@
 #  ___________________________________________________________________________
 
 import pyomo.common.plugin
-from pyomo.pysp import solutionwriter
-from pyomo.pysp.scenariotree.tree_structure import \
+from pysp import solutionwriter
+from pysp.scenariotree.tree_structure import \
     ScenarioTree
 
 #

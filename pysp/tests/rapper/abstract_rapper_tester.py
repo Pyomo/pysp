@@ -15,7 +15,7 @@ import pyutilib.th as unittest
 import sys
 import os
 from pyomo.environ import SolverFactory, TerminationCondition
-import pyomo.pysp.util.rapper as rapper
+import pysp.util.rapper as rapper
 import pyomo as pyomoroot
 
 __author__ = 'David L. Woodruff <DLWoodruff@UCDavis.edu>'

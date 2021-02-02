@@ -24,8 +24,8 @@ import pyutilib.subprocess
 from pyomo.opt import (TerminationCondition,
                        SolverStatus,
                        SolutionStatus)
-from pyomo.pysp.util.configured_object import PySPConfiguredObject
-from pyomo.pysp.util.config import (PySPConfigValue,
+from pysp.util.configured_object import PySPConfiguredObject
+from pysp.util.config import (PySPConfigValue,
                                     PySPConfigBlock,
                                     safe_register_common_option,
                                     safe_register_unique_option,
@@ -33,16 +33,16 @@ from pyomo.pysp.util.config import (PySPConfigValue,
                                     safe_declare_unique_option,
                                     _domain_tuple_of_str_or_dict,
                                     _domain_must_be_str)
-from pyomo.pysp.util.misc import (parse_command_line,
+from pysp.util.misc import (parse_command_line,
                                   launch_command)
-from pyomo.pysp.scenariotree.manager import ScenarioTreeManagerFactory
-import pyomo.pysp.convert.ddsip
-from pyomo.pysp.solvers.spsolver import (SPSolverResults,
+from pysp.scenariotree.manager import ScenarioTreeManagerFactory
+import pysp.convert.ddsip
+from pysp.solvers.spsolver import (SPSolverResults,
                                          SPSolverFactory)
-from pyomo.pysp.solvers.spsolvershellcommand import \
+from pysp.solvers.spsolvershellcommand import \
     SPSolverShellCommand
 
-logger = logging.getLogger('pyomo.pysp')
+logger = logging.getLogger('pysp')
 
 thisfile = os.path.abspath(__file__)
 
@@ -270,7 +270,7 @@ class DDSIPSolver(SPSolverShellCommand, PySPConfiguredObject):
             print("Writing solver files in directory: %s"
                   % (working_directory))
 
-        input_files = pyomo.pysp.convert.ddsip.\
+        input_files = pysp.convert.ddsip.\
             convert_external(
                 input_directory,
                 self.options.firststage_suffix,

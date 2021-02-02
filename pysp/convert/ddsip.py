@@ -21,35 +21,35 @@ from pyomo.core.base.numvalue import value, as_numeric
 from pyomo.core.base.var import _VarData
 from pyomo.core.base.constraint import Constraint, _ConstraintData
 from pyomo.core.base import TextLabeler, NumericLabeler
-from pyomo.pysp.scenariotree.manager import InvocationType
-from pyomo.pysp.annotations import (locate_annotations,
+from pysp.scenariotree.manager import InvocationType
+from pysp.annotations import (locate_annotations,
                                     StochasticConstraintBoundsAnnotation,
                                     StochasticConstraintBodyAnnotation,
                                     StochasticObjectiveAnnotation,
                                     StochasticVariableBoundsAnnotation)
-from pyomo.pysp.convert.smps import (map_variable_stages,
+from pysp.convert.smps import (map_variable_stages,
                                      map_constraint_stages,
                                      build_repns,
                                      _safe_remove_file,
                                      _no_negative_zero,
                                      _deterministic_check_value,
                                      _deterministic_check_constant)
-from pyomo.pysp.util.config import (PySPConfigValue,
+from pysp.util.config import (PySPConfigValue,
                                     PySPConfigBlock,
                                     safe_register_common_option,
                                     safe_register_unique_option,
                                     _domain_must_be_str)
-from pyomo.pysp.scenariotree.manager import \
+from pysp.scenariotree.manager import \
     (ScenarioTreeManagerClientSerial,
      ScenarioTreeManagerClientPyro)
-from pyomo.pysp.util.misc import launch_command
+from pysp.util.misc import launch_command
 import pyomo.environ
 
 from six import iteritems
 
 thisfile = os.path.abspath(__file__)
 
-logger = logging.getLogger('pyomo.pysp')
+logger = logging.getLogger('pysp')
 
 def _convert_external_setup(worker, scenario, *args, **kwds):
     reference_model = scenario._instance
@@ -1127,7 +1127,7 @@ def main(args=None):
     options.get('compile_scenario_instances')._argparse = None
 
     try:
-        ap = argparse.ArgumentParser(prog='pyomo.pysp.convert.ddsip')
+        ap = argparse.ArgumentParser(prog='pysp.convert.ddsip')
         options.initialize_argparse(ap)
 
         # restore the option so the class validation does not
@@ -1142,7 +1142,7 @@ def main(args=None):
 
     return launch_command(run_convertddsip,
                           options,
-                          error_label="pyomo.pysp.convert.ddsip: ",
+                          error_label="pysp.convert.ddsip: ",
                           disable_gc=options.disable_gc,
                           profile_count=options.profile,
                           traceback=options.traceback)

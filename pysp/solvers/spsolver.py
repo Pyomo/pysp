@@ -18,11 +18,11 @@ import logging
 
 from pyomo.opt import UndefinedData
 from pyomo.core import ComponentUID
-from pyomo.pysp.embeddedsp import EmbeddedSP
+from pysp.embeddedsp import EmbeddedSP
 
 from six import StringIO
 
-logger = logging.getLogger('pyomo.pysp')
+logger = logging.getLogger('pysp')
 
 # TODO:
 # Things to test for particular solvers:

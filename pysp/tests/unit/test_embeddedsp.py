@@ -9,7 +9,7 @@
 import pyutilib.th as unittest
 
 import pyomo.core as pc
-from pyomo.pysp.embeddedsp import (EmbeddedSP,
+from pysp.embeddedsp import (EmbeddedSP,
                                    StageCostAnnotation,
                                    VariableStageAnnotation,
                                    StochasticDataAnnotation,

@@ -8,8 +8,8 @@
 #  This software is distributed under the 3-clause BSD License.
 #  ___________________________________________________________________________
 
-import pyomo.pysp.scenariotree.util
-from pyomo.pysp.scenariotree.tree_structure_model import (
+import pysp.scenariotree.util
+from pysp.scenariotree.tree_structure_model import (
     CreateAbstractScenarioTreeModel, CreateConcreteTwoStageScenarioTreeModel,
     ScenarioTreeModelFromNetworkX)
 from pyomo.common.collections import ComponentMap
@@ -19,19 +19,19 @@ from pyomo.core import (value, minimize, maximize,
                         ComponentUID)
 from pyomo.core.base.sos import _SOSConstraintData
 from pyomo.repn import generate_standard_repn
-from pyomo.pysp.phutils import (BasicSymbolMap,
+from pysp.phutils import (BasicSymbolMap,
                                 indexToString,
                                 isVariableNameIndexed,
                                 extractVariableNameAndIndex,
                                 extractComponentIndices,
                                 find_active_objective)
-from pyomo.pysp.scenariotree.tree_structure import (_CUIDLabeler,
+from pysp.scenariotree.tree_structure import (_CUIDLabeler,
                                                     ScenarioTreeNode,
                                                     ScenarioTreeStage,
                                                     Scenario,
                                                     ScenarioTreeBundle,
                                                     ScenarioTree)
-from pyomo.pysp.scenariotree.instance_factory import (DataPortal, Block,
+from pysp.scenariotree.instance_factory import (DataPortal, Block,
                                                       IPyomoScriptModifyInstance,
                                                       AbstractModel, _BlockData,
                                                       ExtensionPoint,
@@ -41,9 +41,9 @@ from pyomo.pysp.scenariotree.instance_factory import (DataPortal, Block,
                                                       _find_scenariotree,
                                                       ScenarioTreeInstanceFactory)
 
-import pyomo.pysp.scenariotree.action_manager_pyro
-import pyomo.pysp.scenariotree.server_pyro
-import pyomo.pysp.scenariotree.manager
-import pyomo.pysp.scenariotree.manager_worker_pyro
-import pyomo.pysp.scenariotree.manager_solver
-import pyomo.pysp.scenariotree.manager_solver_worker_pyro
+import pysp.scenariotree.action_manager_pyro
+import pysp.scenariotree.server_pyro
+import pysp.scenariotree.manager
+import pysp.scenariotree.manager_worker_pyro
+import pysp.scenariotree.manager_solver
+import pysp.scenariotree.manager_solver_worker_pyro

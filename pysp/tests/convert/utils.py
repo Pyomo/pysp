@@ -9,16 +9,16 @@
 #  ___________________________________________________________________________
 
 from pyomo.core import *
-from pyomo.pysp.scenariotree.tree_structure_model import \
+from pysp.scenariotree.tree_structure_model import \
     ScenarioTreeModelFromNetworkX
-from pyomo.pysp.annotations import (ConstraintStageAnnotation,
+from pysp.annotations import (ConstraintStageAnnotation,
                                     StochasticConstraintBoundsAnnotation,
                                     StochasticConstraintBodyAnnotation,
                                     StochasticObjectiveAnnotation,
                                     StochasticVariableBoundsAnnotation)
 
 def simple_twostage_scenario_tree():
-    from pyomo.pysp.scenariotree.tree_structure_model \
+    from pysp.scenariotree.tree_structure_model \
         import CreateConcreteTwoStageScenarioTreeModel
     st_model = CreateConcreteTwoStageScenarioTreeModel(2)
     first_stage = st_model.Stages.first()
@@ -45,7 +45,7 @@ def simple_twostage_model():
     return model
 
 def simple_threestage_scenario_tree():
-    from pyomo.pysp.scenariotree.tree_structure_model \
+    from pysp.scenariotree.tree_structure_model \
         import CreateConcreteTwoStageScenarioTreeModel
     import networkx
     G = networkx.balanced_tree(2,2,networkx.DiGraph())

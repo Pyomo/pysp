@@ -20,7 +20,7 @@ from pyutilib.pyro import using_pyro3, using_pyro4
 import pyutilib.th as unittest
 
 from pyomo.common.dependencies import networkx_available as have_networkx
-from pyomo.pysp.util.misc import (_get_test_nameserver,
+from pysp.util.misc import (_get_test_nameserver,
                                   _get_test_dispatcher,
                                   _poll,
                                   _kill)

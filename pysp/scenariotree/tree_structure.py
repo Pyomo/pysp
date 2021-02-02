@@ -32,7 +32,7 @@ from pyomo.core import (value, minimize, maximize,
                         ComponentUID)
 from pyomo.core.base.sos import _SOSConstraintData
 from pyomo.repn import generate_standard_repn
-from pyomo.pysp.phutils import (BasicSymbolMap,
+from pysp.phutils import (BasicSymbolMap,
                                 indexToString,
                                 isVariableNameIndexed,
                                 extractVariableNameAndIndex,
@@ -42,7 +42,7 @@ from pyomo.pysp.phutils import (BasicSymbolMap,
 from six import iterkeys, iteritems, itervalues
 from six.moves import xrange
 
-logger = logging.getLogger('pyomo.pysp')
+logger = logging.getLogger('pysp')
 
 CUID_repr_version = 1
 

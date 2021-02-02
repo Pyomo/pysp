@@ -4,7 +4,7 @@ Broadcast server listening on: ('0.0.0.0', 9090)
 URI is: PYRO://10.0.0.15:9090/0a00000f149d20a08bdd88f78162bad6bc
 URI written to: [base]/pysp/tests/examples/Pyro_NS_URI
 Name Server started.
-User-defined PH extension module=pyomo.pysp.plugins.phhistoryextension already imported - skipping
+User-defined PH extension module=pysp.plugins.phhistoryextension already imported - skipping
 Trying to import module=[base]/examples/farmer/config/aggregategetter.py
 Module successfully loaded
 Trying to import module=[base]/examples/farmer/config/rhosetter.py
@@ -33,7 +33,7 @@ Transmitting user aggregate callback invocations to phsolverservers
 Broadcasting final aggregate data to phsolverservers
 Transmitting user rho callback invocations to phsolverservers
 Transmitting user bound callback invocations to phsolverservers
-User-defined PH solution writer module=pyomo.pysp.plugins.jsonsolutionwriter already imported - skipping
+User-defined PH solution writer module=pysp.plugins.jsonsolutionwriter already imported - skipping
 Starting PH
 
 Initiating PH iteration=0

@@ -9,9 +9,9 @@
 #  ___________________________________________________________________________
 
 from pyomo.common.plugin import SingletonPlugin, implements
-from pyomo.pysp import solutionwriter
-from pyomo.pysp.scenariotree import ScenarioTree
-from pyomo.pysp.plugins.phhistoryextension \
+from pysp import solutionwriter
+from pysp.scenariotree import ScenarioTree
+from pysp.plugins.phhistoryextension \
     import extract_scenario_tree_structure, \
            extract_scenario_solutions, \
            extract_node_solutions

@@ -27,7 +27,7 @@ import argparse
 
 import six
 
-logger = logging.getLogger('pyomo.pysp')
+logger = logging.getLogger('pysp')
 
 # Major Changes:
 #  - Separated scenario tree manager from solver manager

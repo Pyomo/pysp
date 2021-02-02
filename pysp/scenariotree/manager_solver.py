@@ -24,15 +24,15 @@ from pyomo.opt import (SolverFactory,
                        SolutionStatus)
 from pyomo.opt.base.solvers import OptSolver
 from pyomo.opt.parallel import SolverManagerFactory
-from pyomo.pysp.util.config import (PySPConfigBlock,
+from pysp.util.config import (PySPConfigBlock,
                                     safe_declare_common_option)
-from pyomo.pysp.util.configured_object import \
+from pysp.util.configured_object import \
     PySPConfiguredObject
-from pyomo.pysp.scenariotree.preprocessor import \
+from pysp.scenariotree.preprocessor import \
     ScenarioTreePreprocessor
-from pyomo.pysp.scenariotree.server_pyro \
+from pysp.scenariotree.server_pyro \
     import ScenarioTreeServerPyro
-from pyomo.pysp.scenariotree.manager import \
+from pysp.scenariotree.manager import \
     (ScenarioTreeManager,
      _ScenarioTreeManagerWorker,
      ScenarioTreeManagerClientSerial,

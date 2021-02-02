@@ -1,4 +1,4 @@
-from pyomo.pysp.scenariotree.tree_structure_model import \
+from pysp.scenariotree.tree_structure_model import \
     CreateConcreteTwoStageScenarioTreeModel
 
 model = CreateConcreteTwoStageScenarioTreeModel(3)

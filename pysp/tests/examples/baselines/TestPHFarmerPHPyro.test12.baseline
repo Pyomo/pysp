@@ -4,8 +4,8 @@ Broadcast server listening on: ('0.0.0.0', 9090)
 URI is: PYRO://10.0.0.11:9090/0a00000bffc420a83404b09ed509967ab9
 URI written to: [base]/pysp/tests/examples/Pyro_NS_URI
 Name Server started.
-User-defined PH extension module=pyomo.pysp.plugins.phhistoryextension already imported - skipping
-User-defined PH extension module=pyomo.pysp.plugins.convexhullboundextension already imported - skipping
+User-defined PH extension module=pysp.plugins.phhistoryextension already imported - skipping
+User-defined PH extension module=pysp.plugins.convexhullboundextension already imported - skipping
 Dispatcher is ready.
 Attempting to find Pyro dispatcher object...
 Attempting to find Pyro dispatcher object...
@@ -29,7 +29,7 @@ WARNING: No construction rule or expression specified for constraint 'W_Balance'
 WARNING: No construction rule or expression specified for constraint 'V_Bound'
 WW PH Extension: Loading user-specified configuration from file=[base]/examples/farmer/config/wwph.cfg
 WW PH Extension: Loading variable suffixes from file=[base]/examples/farmer/config/wwph.suffixes
-User-defined PH solution writer module=pyomo.pysp.plugins.jsonsolutionwriter already imported - skipping
+User-defined PH solution writer module=pysp.plugins.jsonsolutionwriter already imported - skipping
 Starting PH
 
 Initiating PH iteration=0

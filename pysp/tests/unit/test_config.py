@@ -10,7 +10,7 @@
 
 import pyutilib.th as unittest
 
-from pyomo.pysp.util.config import (PySPConfigValue,
+from pysp.util.config import (PySPConfigValue,
                                     PySPConfigBlock,
                                     safe_register_common_option)
 import six

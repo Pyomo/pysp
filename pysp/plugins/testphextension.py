@@ -9,7 +9,7 @@
 #  ___________________________________________________________________________
 
 from pyomo.common.plugin import SingletonPlugin, implements
-from pyomo.pysp import phextension
+from pysp import phextension
 
 
 class testphextension(SingletonPlugin):

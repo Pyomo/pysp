@@ -27,13 +27,13 @@ pysp_examples_dir = \
     join(dirname(dirname(dirname(dirname(thisdir)))), "examples", "pysp")
 
 import pyomo.environ as pyo
-from pyomo.pysp.embeddedsp import (EmbeddedSP,
+from pysp.embeddedsp import (EmbeddedSP,
                                    StochasticDataAnnotation,
                                    TableDistribution,
                                    UniformDistribution,
                                    StageCostAnnotation,
                                    VariableStageAnnotation)
-from pyomo.pysp.convert.smps import convert_embedded
+from pysp.convert.smps import convert_embedded
 
 baa99_basemodel = None
 piecewise_model_embedded = None
@@ -223,7 +223,7 @@ class TestSMPSEmbeddedBad(unittest.TestCase):
             ("Invalid distribution type 'UniformDistribution' for stochastic "
              "parameter 'd1'. The embedded SMPS writer currently "
              "only supports discrete table distributions of type "
-             "pyomo.pysp.embeddedsp.TableDistribution."))
+             "pysp.embeddedsp.TableDistribution."))
 
     def test_nonlinear_stoch_constraint(self):
         model = self._get_base_model()
@@ -339,7 +339,7 @@ class TestSMPSEmbeddedBad(unittest.TestCase):
             ("Invalid distribution type 'UniformDistribution' for stochastic "
              "parameter 'd2'. The embedded SMPS writer currently "
              "only supports discrete table distributions of type "
-             "pyomo.pysp.embeddedsp.TableDistribution."))
+             "pysp.embeddedsp.TableDistribution."))
 
 @unittest.category('nightly')
 class TestSMPSEmbedded(unittest.TestCase):

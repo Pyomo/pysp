@@ -24,9 +24,9 @@ import pyomo.common.plugin
 from pyomo.core import TextLabeler, Var, Constraint, Piecewise, Expression, SOSConstraint
 from pyomo.core.base.var import _VarData
 from pyomo.core.base.piecewise import _PiecewiseData
-from pyomo.pysp import phextension
-from pyomo.pysp.phsolverserver import _PHSolverServer
-from pyomo.pysp.phsolverserverutils import \
+from pysp import phextension
+from pysp.phsolverserver import _PHSolverServer
+from pysp.phsolverserverutils import \
     transmit_external_function_invocation_to_worker
 
 from six import iteritems

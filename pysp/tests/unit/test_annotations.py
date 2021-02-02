@@ -11,7 +11,7 @@
 import pyutilib.th as unittest
 
 import pyomo.environ as pyo
-from pyomo.pysp.annotations import (locate_annotations,
+from pysp.annotations import (locate_annotations,
                                     StageCostAnnotation,
                                     PySP_StageCostAnnotation,
                                     VariableStageAnnotation,

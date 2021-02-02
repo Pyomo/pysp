@@ -8,11 +8,11 @@ Author: David L. Woodruff, started February 2017
 import inspect
 from pyomo.core.base.component import _name_index_generator
 from pyomo.environ import SolverFactory
-from pyomo.pysp.scenariotree.instance_factory \
+from pysp.scenariotree.instance_factory \
     import ScenarioTreeInstanceFactory
-from pyomo.pysp.ef import create_ef_instance
+from pysp.ef import create_ef_instance
 
-from pyomo.pysp.phinit import construct_ph_options_parser, GenerateScenarioTreeForPH, PHAlgorithmBuilder
+from pysp.phinit import construct_ph_options_parser, GenerateScenarioTreeForPH, PHAlgorithmBuilder
 
 def _optiondict_2_list(phopts, args_list = None):
     """ A little utility to change the format of options"""

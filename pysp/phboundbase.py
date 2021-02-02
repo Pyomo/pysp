@@ -17,10 +17,10 @@ import copy
 from six import iteritems
 from operator import itemgetter
 
-from pyomo.pysp.phutils import indexToString
+from pysp.phutils import indexToString
 from pyomo.opt import UndefinedData
 
-logger = logging.getLogger('pyomo.pysp')
+logger = logging.getLogger('pysp')
 
 # ===== various ways to extract xhat =======
 def ExtractInternalNodeSolutionsWithClosestScenarioNodebyNode(ph):
@@ -113,7 +113,7 @@ def ExtractInternalNodeSolutionsWithDiscreteVoting(ph):
     return node_solutions
 
 def ExtractInternalNodeSolutionsWithSlamming(ph):
-    from pyomo.pysp.plugins.wwphextension import _parse_yaml_file
+    from pysp.plugins.wwphextension import _parse_yaml_file
     # Since it was a file, 
     #   assume that the argument was a json file with slamming instructions.
     # This will ignore suffixes we don't care about.

@@ -15,7 +15,7 @@ import tempfile
 import os
 import shutil
 import pyomo.environ as pyo
-import pyomo.pysp.util.rapper as rapper
+import pysp.util.rapper as rapper
 import pyomo as pyomoroot
 
 solvername = "ipopt" # could use almost any solver

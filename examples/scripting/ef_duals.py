@@ -21,9 +21,9 @@
 import os
 import sys
 from pyomo.environ import *
-from pyomo.pysp.scenariotree.manager import \
+from pysp.scenariotree.manager import \
     ScenarioTreeManagerClientSerial
-from pyomo.pysp.ef import create_ef_instance
+from pysp.ef import create_ef_instance
 from pyomo.opt import SolverFactory
 
 thisdir = os.path.dirname(os.path.abspath(__file__))

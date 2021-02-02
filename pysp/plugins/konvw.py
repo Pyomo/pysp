@@ -18,15 +18,15 @@ import logging
 from math import fabs
 
 import pyomo.common.plugin
-from pyomo.pysp import phextension
-from pyomo.pysp.generators import scenario_tree_node_variables_generator_noinstances
-from pyomo.pysp.phutils import indexToString
+from pysp import phextension
+from pysp.generators import scenario_tree_node_variables_generator_noinstances
+from pysp.phutils import indexToString
 
 from operator import itemgetter
 
-from pyomo.pysp.plugins.phboundextension import _PHBoundBase
+from pysp.plugins.phboundextension import _PHBoundBase
 
-logger = logging.getLogger('pyomo.pysp')
+logger = logging.getLogger('pysp')
 
 
 class phweightinspectextension(pyomo.common.plugin.SingletonPlugin, _PHBoundBase):

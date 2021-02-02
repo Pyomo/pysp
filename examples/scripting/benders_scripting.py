@@ -24,9 +24,9 @@ import sys
 import random
 
 from pyomo.environ import *
-from pyomo.pysp.scenariotree.manager import \
+from pysp.scenariotree.manager import \
     ScenarioTreeManagerFactory
-from pyomo.pysp.solvers.benders import BendersAlgorithm
+from pysp.solvers.benders import BendersAlgorithm
 
 # *** How to run this example using Pyro ***:
 #

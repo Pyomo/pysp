@@ -30,16 +30,16 @@ from pyomo.common.plugin import ExtensionPoint, SingletonPlugin
 from pyomo.opt import (SolverFactory,
                        TerminationCondition,
                        SolutionStatus)
-from pyomo.pysp.phextension import IPHSolverServerExtension
-from pyomo.pysp.scenariotree.instance_factory import \
+from pysp.phextension import IPHSolverServerExtension
+from pysp.scenariotree.instance_factory import \
     ScenarioTreeInstanceFactory
-from pyomo.pysp.phsolverserverutils import (TransmitType,
+from pysp.phsolverserverutils import (TransmitType,
                                            InvocationType)
-from pyomo.pysp.ph import _PHBase
-from pyomo.pysp.phutils import (reset_nonconverged_variables,
+from pysp.ph import _PHBase
+from pysp.phutils import (reset_nonconverged_variables,
                                 reset_stage_cost_variables,
                                 extract_solve_times)
-from pyomo.pysp.util.misc import launch_command
+from pysp.util.misc import launch_command
 
 from six import iterkeys, iteritems
 

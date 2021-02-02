@@ -18,7 +18,7 @@ from pyomo.core.base.param import Param, _ParamData
 from pyomo.core.base.objective import Objective, _ObjectiveData
 from pyomo.core.base.block import Block, _BlockData
 
-logger = logging.getLogger('pyomo.pysp')
+logger = logging.getLogger('pysp')
 
 def locate_annotations(model, annotation_type, max_allowed=None):
     """

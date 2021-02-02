@@ -28,13 +28,13 @@ from pyomo.opt.base import ConverterError
 from pyomo.common.dependencies import attempt_import
 from pyomo.common.plugin import (ExtensionPoint,
                                  SingletonPlugin)
-from pyomo.pysp.util.config import PySPConfigBlock
-from pyomo.pysp.util.configured_object import PySPConfiguredObject
+from pysp.util.config import PySPConfigBlock
+from pysp.util.configured_object import PySPConfiguredObject
 
 pyu_pyro = attempt_import('pyutilib.pyro', alt_names=['pyu_pyro'])[0]
 
 
-logger = logging.getLogger('pyomo.pysp')
+logger = logging.getLogger('pysp')
 
 def _generate_unique_module_name():
     import uuid
@@ -111,12 +111,12 @@ def load_external_module(module_name,
     return module_to_find, sys_modules_key
 
 def sort_extensions_by_precedence(extensions):
-    import pyomo.pysp.util.configured_object
+    import pysp.util.configured_object
     return tuple(sorted(
         extensions,
         key=lambda ext:
         (ext.get_option('extension_precedence') if \
-         isinstance(ext, pyomo.pysp.util.configured_object.\
+         isinstance(ext, pysp.util.configured_object.\
                     PySPConfiguredExtension) else \
          float('-inf'))))
 
@@ -157,9 +157,9 @@ def parse_command_line(args,
                        register_options_callback,
                        with_extensions=None,
                        **kwds):
-    import pyomo.pysp.plugins
-    pyomo.pysp.plugins.load()
-    from pyomo.pysp.util.config import _domain_tuple_of_str
+    import pysp.plugins
+    pysp.plugins.load()
+    from pysp.util.config import _domain_tuple_of_str
 
     registered_extensions = {}
     if with_extensions is not None:

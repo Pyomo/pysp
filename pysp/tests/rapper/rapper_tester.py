@@ -17,9 +17,9 @@ import sys
 import os
 import shutil
 from pyomo.environ import SolverFactory, TerminationCondition
-import pyomo.pysp.util.rapper as rapper
-from pyomo.pysp.scenariotree.tree_structure_model import CreateAbstractScenarioTreeModel
-import pyomo.pysp.plugins.csvsolutionwriter as csvw
+import pysp.util.rapper as rapper
+from pysp.scenariotree.tree_structure_model import CreateAbstractScenarioTreeModel
+import pysp.plugins.csvsolutionwriter as csvw
 import pyomo as pyomoroot
 try:
     import networkx

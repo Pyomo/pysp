@@ -26,15 +26,15 @@ from pyomo.core import minimize
 # related hacks below, searching for CVARHACK.
 from pyomo.opt import UndefinedData
 from pyomo.common import pyomo_command
-from pyomo.pysp.scenariotree.instance_factory import \
+from pysp.scenariotree.instance_factory import \
     ScenarioTreeInstanceFactory
-from pyomo.pysp.phinit import (construct_ph_options_parser,
+from pysp.phinit import (construct_ph_options_parser,
                                GenerateScenarioTreeForPH,
                                PHAlgorithmBuilder,
                                PHFromScratch,
                                PHCleanup)
-from pyomo.pysp.ef_writer_script import ExtensiveFormAlgorithm
-from pyomo.pysp.phutils import _OLD_OUTPUT
+from pysp.ef_writer_script import ExtensiveFormAlgorithm
+from pysp.phutils import _OLD_OUTPUT
 
 from six import iteritems, iterkeys
 
@@ -614,7 +614,7 @@ def run_conf(scenario_instance_factory,
             # fixing yields side-effects on the original gk_ef, but that
             # is fine as it isn't used after this point.
             print("Solving the extensive form given the xhat solution.")
-            #xhat = pyomo.pysp.phboundbase.ExtractInternalNodeSolutionsforInner(xhat_ph)
+            #xhat = pysp.phboundbase.ExtractInternalNodeSolutionsforInner(xhat_ph)
             #
             # fix the first stage variables
             #

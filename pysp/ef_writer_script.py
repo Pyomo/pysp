@@ -24,8 +24,8 @@ from pyomo.opt import (SolverFactory,
                        UnknownSolver,
                        SolutionStatus)
 from pyomo.opt.parallel import SolverManagerFactory
-from pyomo.pysp.util.configured_object import PySPConfiguredObject
-from pyomo.pysp.util.config import (PySPConfigValue,
+from pysp.util.configured_object import PySPConfiguredObject
+from pysp.util.config import (PySPConfigValue,
                                     PySPConfigBlock,
                                     safe_register_common_option,
                                     safe_register_unique_option,
@@ -38,19 +38,19 @@ from pyomo.pysp.util.config import (PySPConfigValue,
                                     _output_options_group_title,
                                     _extension_options_group_title,
                                     _deprecated_options_group_title)
-from pyomo.pysp.util.misc import (parse_command_line,
+from pysp.util.misc import (parse_command_line,
                                   launch_command,
                                   sort_extensions_by_precedence)
-from pyomo.pysp.phutils import find_active_objective
-from pyomo.pysp.scenariotree.manager_solver import \
+from pysp.phutils import find_active_objective
+from pysp.scenariotree.manager_solver import \
     (ScenarioTreeManagerClientSerial)
-from pyomo.pysp.solutionioextensions import \
+from pysp.solutionioextensions import \
     (IPySPSolutionSaverExtension,
      IPySPSolutionLoaderExtension)
-from pyomo.pysp.solutionwriter import ISolutionWriterExtension
-from pyomo.pysp.ef import write_ef, create_ef_instance
+from pysp.solutionwriter import ISolutionWriterExtension
+from pysp.ef import write_ef, create_ef_instance
 
-logger = logging.getLogger('pyomo.pysp')
+logger = logging.getLogger('pysp')
 
 _ef_group_label = "EF Options"
 
@@ -630,12 +630,12 @@ def runef_register_options(options=None):
                 "DEPRECATED: The '--activate-json-io-solution-saver "
                 "command-line option has been deprecated and will "
                 "be removed in the future. Please the following instead: "
-                "'----solution-saver-extension=pyomo.pysp.plugins.jsonio'")
+                "'----solution-saver-extension=pysp.plugins.jsonio'")
             val = getattr(namespace,
                           'CONFIGBLOCK.solution_saver_extension', [])
             setattr(namespace,
                     'CONFIGBLOCK.solution_saver_extension',
-                    val + ["pyomo.pysp.plugins.jsonio"])
+                    val + ["pysp.plugins.jsonio"])
 
     def _warn_activate_jsonio_solution_saver(val):
         # don't use logger here since users might not import
@@ -645,7 +645,7 @@ def runef_register_options(options=None):
             "config item will be ignored "
             "unless it is being used as a command-line option "
             "where it can be redirected to 'solution_saver_extension'. "
-            "Please use 'solution_saver_extension=pyomo.pysp.plugins.jsonio' "
+            "Please use 'solution_saver_extension=pysp.plugins.jsonio' "
             "instead.\n")
         return _domain_tuple_of_str(val)
 
@@ -657,7 +657,7 @@ def runef_register_options(options=None):
             domain=_warn_activate_jsonio_solution_saver,
             description=(
                 "Deprecated alias for "
-                "--solution-saver-extension=pyomo.pysp.plugins.jsonio"
+                "--solution-saver-extension=pysp.plugins.jsonio"
             ),
             doc=None,
             visibility=1),

@@ -15,7 +15,7 @@ from pyomo.opt import (ProblemFormat,
                        SolverStatus,
                        TerminationCondition,
                        SolutionStatus)
-from pyomo.pysp.phutils import (isVariableNameIndexed,
+from pysp.phutils import (isVariableNameIndexed,
                                 extractVariableNameAndIndex,
                                 extractComponentIndices)
 

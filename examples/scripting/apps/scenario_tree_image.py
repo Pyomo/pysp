@@ -12,14 +12,14 @@ import os
 import sys
 
 from pyomo.common.tempfiles import TempfileManager
-from pyomo.pysp.util.config import (PySPConfigValue,
+from pysp.util.config import (PySPConfigValue,
                                     PySPConfigBlock,
                                     safe_register_common_option,
                                     safe_register_unique_option,
                                     _domain_must_be_str)
-from pyomo.pysp.util.misc import (parse_command_line,
+from pysp.util.misc import (parse_command_line,
                                   launch_command)
-from pyomo.pysp.scenariotree.instance_factory import \
+from pysp.scenariotree.instance_factory import \
     ScenarioTreeInstanceFactory
 
 def generate_scenario_tree_image(options):

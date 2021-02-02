@@ -24,16 +24,16 @@ from pyomo.core.base import maximize, minimize, Var, Suffix
 from pyomo.opt.base import SolverFactory
 from pyomo.opt.parallel import SolverManagerFactory
 from pyomo.opt import undefined
-from pyomo.pysp.phextension import IPHExtension
-from pyomo.pysp.ef_writer_script import ExtensiveFormAlgorithm
-from pyomo.pysp.ph import ProgressiveHedging
-from pyomo.pysp.phutils import (reset_nonconverged_variables,
+from pysp.phextension import IPHExtension
+from pysp.ef_writer_script import ExtensiveFormAlgorithm
+from pysp.ph import ProgressiveHedging
+from pysp.phutils import (reset_nonconverged_variables,
                                 reset_stage_cost_variables,
                                 _OLD_OUTPUT)
-from pyomo.pysp.scenariotree.instance_factory import \
+from pysp.scenariotree.instance_factory import \
     ScenarioTreeInstanceFactory
-from pyomo.pysp.solutionwriter import ISolutionWriterExtension
-from pyomo.pysp.util.misc import (launch_command,
+from pysp.solutionwriter import ISolutionWriterExtension
+from pysp.util.misc import (launch_command,
                                   load_extensions)
 
 guppy, guppy_available = attempt_import('guppy')
@@ -760,7 +760,7 @@ def PHAlgorithmBuilder(options, scenario_tree):
     #
     if options.enable_ww_extensions:
 
-        import pyomo.pysp.plugins.wwphextension
+        import pysp.plugins.wwphextension
 
         # explicitly enable the WW extension plugin - it may have been
         # previously loaded and/or enabled.
@@ -768,7 +768,7 @@ def PHAlgorithmBuilder(options, scenario_tree):
 
         for plugin in ph_extension_point(all=True):
            if isinstance(plugin,
-                         pyomo.pysp.plugins.wwphextension.wwphextension):
+                         pysp.plugins.wwphextension.wwphextension):
 
               plugin.enable()
               ph_plugins.append(plugin)
@@ -1025,8 +1025,8 @@ def run_ph(options, ph):
     # we move over to the new scripting interface
     if options.activate_jsonio_solution_saver:
         print("Executing jsonio solution saver extension")
-        import pyomo.pysp.plugins.jsonio
-        jsonsaver = pyomo.pysp.plugins.jsonio.JSONSolutionSaverExtension()
+        import pysp.plugins.jsonio
+        jsonsaver = pysp.plugins.jsonio.JSONSolutionSaverExtension()
         jsonsaver_options = jsonsaver.register_options()
         jsonsaver_options.jsonsaver_output_name = \
             options.jsonsaver_output_name
@@ -1102,7 +1102,7 @@ def run_ph(options, ph):
                         ph._scenario_tree,
                         scenario)
 
-            pyomo.pysp.phsolverserverutils.\
+            pysp.phsolverserverutils.\
                 warmstart_scenario_instances(ph)
 
             # no point in doing advanced preprocessing for the single
@@ -1233,8 +1233,8 @@ def run_ph(options, ph):
             # to the new scripting interface
             if options.activate_jsonio_solution_saver:
                 print("Executing jsonio solution saver extension")
-                import pyomo.pysp.plugins.jsonio
-                jsonsaver = pyomo.pysp.plugins.jsonio.JSONSolutionSaverExtension()
+                import pysp.plugins.jsonio
+                jsonsaver = pysp.plugins.jsonio.JSONSolutionSaverExtension()
                 jsonsaver_options = jsonsaver.register_options()
                 jsonsaver_options.jsonsaver_output_name = \
                     options.jsonsaver_output_name

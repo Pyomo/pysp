@@ -25,17 +25,17 @@ from pyomo.core import (
 )
 from pyomo.opt import (
     SolverFactory, SolverStatus, TerminationCondition, ProblemFormat )
-from pyomo.pysp import phextension
+from pysp import phextension
 from pyomo.solvers.plugins.smanager.phpyro import SolverManager_PHPyro
 from pyomo.common.plugin import SingletonPlugin, implements
 
 from pyomo.repn.standard_repn import (preprocess_block_constraints,
                                       preprocess_block_objectives)
-from pyomo.pysp.phsolverserverutils import InvocationType
-from pyomo.pysp.convergence import NormalizedTermDiffConvergence
+from pysp.phsolverserverutils import InvocationType
+from pysp.convergence import NormalizedTermDiffConvergence
 
 import logging
-logger = logging.getLogger('pyomo.pysp')
+logger = logging.getLogger('pysp')
 
 import pyomo.version
 PYOMO_4_0 = pyomo.version.version_info[:2] < (4,1)
@@ -915,7 +915,7 @@ class InterScenarioPlugin(SingletonPlugin):
                         queue_name=ph._phpyro_job_worker_map[problem._name],
                         invocation_type=InvocationType.SingleInvocation.key,
                         generateResponse=True,
-                        module_name='pyomo.pysp.plugins.interscenario',
+                        module_name='pysp.plugins.interscenario',
                         function_name='solve_fixed_scenario_solutions',
                         function_kwds=kwd_options,
                         function_args=options,
@@ -1002,7 +1002,7 @@ class InterScenarioPlugin(SingletonPlugin):
                         queue_name=ph._phpyro_job_worker_map[problem._name],
                         invocation_type=InvocationType.SingleInvocation.key,
                         generateResponse=True,
-                        module_name='pyomo.pysp.plugins.interscenario',
+                        module_name='pysp.plugins.interscenario',
                         function_name='add_new_cuts',
                         function_kwds=None,
                         function_args=( cuts,

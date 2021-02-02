@@ -13,7 +13,7 @@ import sys
 
 from pyutilib.misc import compare_repn
 
-from pyomo.pysp.plugins.phhistoryextension import load_solution
+from pysp.plugins.phhistoryextension import load_solution
 
 import six
 

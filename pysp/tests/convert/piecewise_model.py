@@ -9,7 +9,7 @@
 #  ___________________________________________________________________________
 
 from pyomo.core import ConcreteModel, Var, Param, Expression, Objective, Constraint, Piecewise, sum_product, inequality
-from pyomo.pysp.annotations import (StochasticConstraintBoundsAnnotation,
+from pysp.annotations import (StochasticConstraintBoundsAnnotation,
                                     StochasticConstraintBodyAnnotation,
                                     StochasticObjectiveAnnotation)
 

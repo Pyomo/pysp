@@ -24,8 +24,8 @@ except ImportError:                         #pragma:nocover
     from ordereddict import OrderedDict
 
 from pyomo.core import (Block, Set, Expression, Param, maximize)
-from pyomo.pysp.util.configured_object import PySPConfiguredObject
-from pyomo.pysp.util.config import (PySPConfigValue,
+from pysp.util.configured_object import PySPConfiguredObject
+from pysp.util.config import (PySPConfigValue,
                                     PySPConfigBlock,
                                     safe_register_common_option,
                                     safe_register_unique_option,
@@ -33,16 +33,16 @@ from pyomo.pysp.util.config import (PySPConfigValue,
                                     safe_declare_unique_option,
                                     _domain_positive,
                                     _domain_must_be_str)
-from pyomo.pysp.util.misc import (parse_command_line,
+from pysp.util.misc import (parse_command_line,
                                   launch_command)
-from pyomo.pysp.scenariotree.manager import \
+from pysp.scenariotree.manager import \
     (InvocationType,
      ScenarioTreeManager,
      ScenarioTreeManagerFactory)
-from pyomo.pysp.scenariotree.manager_solver import \
+from pysp.scenariotree.manager_solver import \
     ScenarioTreeManagerSolverFactory
-from pyomo.pysp.phutils import indexToString
-from pyomo.pysp.solvers.spsolver import (SPSolver,
+from pysp.phutils import indexToString
+from pysp.solvers.spsolver import (SPSolver,
                                          SPSolverResults,
                                          SPSolverFactory)
 

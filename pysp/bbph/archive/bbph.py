@@ -9,10 +9,10 @@
 #   but... for now we could just branch and then hit infeasiblity...
 
 import pyomo.environ
-from pyomo.pysp import ph, phinit, phutils
+from pysp import ph, phinit, phutils
 from pyomo.core.base import maximize, minimize
 import pyomo.solvers.plugins.smanager.phpyro
-from pyomo.pysp import phsolverserverutils
+from pysp import phsolverserverutils
 
 import os
 from optparse import OptionParser, OptionGroup

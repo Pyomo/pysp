@@ -4,7 +4,7 @@ Broadcast server listening on: ('0.0.0.0', 9090)
 URI is: PYRO://10.0.0.14:9090/0a00000e869d20bd7fa6bddd50d0a7b69b
 URI written to: [base]/pysp/tests/examples/Pyro_NS_URI
 Name Server started.
-User-defined PH extension module=pyomo.pysp.plugins.phhistoryextension already imported - skipping
+User-defined PH extension module=pysp.plugins.phhistoryextension already imported - skipping
 Trying to import module=[base]/examples/networkflow/config/aggregategetter.py
 Module successfully loaded
 Trying to import module=[base]/examples/networkflow/config/rhosetter0.5.py
@@ -34,7 +34,7 @@ Broadcasting final aggregate data to phsolverservers
 Transmitting user rho callback invocations to phsolverservers
 Transmitting user bound callback invocations to phsolverservers
 WW PH Extension: Loading user-specified configuration from file=[base]/examples/networkflow/config/wwph-aggressivefixing.cfg
-User-defined PH solution writer module=pyomo.pysp.plugins.jsonsolutionwriter already imported - skipping
+User-defined PH solution writer module=pysp.plugins.jsonsolutionwriter already imported - skipping
 Starting PH
 
 Initiating PH iteration=0

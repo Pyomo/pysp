@@ -11,11 +11,11 @@
 __all__ = ("ScenarioTreeManagerSolverWorkerPyro",)
 
 from pyomo.opt import undefined
-from pyomo.pysp.util.configured_object import PySPConfiguredObject
-from pyomo.pysp.util.config import PySPConfigBlock
-from pyomo.pysp.scenariotree.manager_worker_pyro import \
+from pysp.util.configured_object import PySPConfiguredObject
+from pysp.util.config import PySPConfigBlock
+from pysp.scenariotree.manager_worker_pyro import \
     ScenarioTreeManagerWorkerPyro
-from pyomo.pysp.scenariotree.manager_solver import \
+from pysp.scenariotree.manager_solver import \
     (_ScenarioTreeManagerSolverWorker,
      ScenarioTreeManagerSolver)
 
@@ -154,6 +154,6 @@ class ScenarioTreeManagerSolverWorkerPyro(_ScenarioTreeManagerSolverWorker,
         self.push_fix_queue_to_instances()
 
 # register this worker with the pyro server
-from pyomo.pysp.scenariotree.server_pyro import RegisterWorker
+from pysp.scenariotree.server_pyro import RegisterWorker
 RegisterWorker('ScenarioTreeManagerSolverWorkerPyro',
                ScenarioTreeManagerSolverWorkerPyro)

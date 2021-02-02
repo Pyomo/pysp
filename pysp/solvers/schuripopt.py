@@ -24,26 +24,26 @@ from pyomo.core import ComponentUID
 from pyomo.opt import (ReaderFactory,
                        ResultsFormat,
                        UndefinedData)
-from pyomo.pysp.util.configured_object import PySPConfiguredObject
-from pyomo.pysp.util.config import (PySPConfigValue,
+from pysp.util.configured_object import PySPConfiguredObject
+from pysp.util.config import (PySPConfigValue,
                                     PySPConfigBlock,
                                     safe_register_common_option,
                                     safe_register_unique_option,
                                     _domain_tuple_of_str_or_dict)
-from pyomo.pysp.util.misc import (parse_command_line,
+from pysp.util.misc import (parse_command_line,
                                   launch_command)
-from pyomo.pysp.scenariotree.manager import \
+from pysp.scenariotree.manager import \
     (InvocationType,
      ScenarioTreeManagerFactory,
      ScenarioTreeManagerClientPyro,
      ScenarioTreeSolveResults)
-from pyomo.pysp.scenariotree.manager_solver import \
+from pysp.scenariotree.manager_solver import \
     ScenarioTreeManagerSolverClientPyro
-from pyomo.pysp.solvers.spsolver import (SPSolverResults,
+from pysp.solvers.spsolver import (SPSolverResults,
                                          SPSolverFactory)
-from pyomo.pysp.solvers.spsolvershellcommand import \
+from pysp.solvers.spsolvershellcommand import \
     SPSolverShellCommand
-from pyomo.pysp.convert.schuripopt import \
+from pysp.convert.schuripopt import \
     (_write_bundle_nl,
      _write_scenario_nl,
      _write_problem_list_file)

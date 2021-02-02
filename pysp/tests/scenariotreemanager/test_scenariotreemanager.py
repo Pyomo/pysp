@@ -27,25 +27,25 @@ from pyutilib.pyro import using_pyro3, using_pyro4
 import pyutilib.th as unittest
 
 from pyomo.common.dependencies import dill, dill_available
-from pyomo.pysp.util.misc import (_get_test_nameserver,
+from pysp.util.misc import (_get_test_nameserver,
                                   _get_test_dispatcher,
                                   _poll,
                                   _kill)
-from pyomo.pysp.util.config import PySPConfigBlock
-from pyomo.pysp.scenariotree.manager import (ScenarioTreeManager,
+from pysp.util.config import PySPConfigBlock
+from pysp.scenariotree.manager import (ScenarioTreeManager,
                                              ScenarioTreeManagerClient,
                                              _ScenarioTreeManagerWorker,
                                              ScenarioTreeManagerClientSerial,
                                              ScenarioTreeManagerClientPyro,
                                              ScenarioTreeManagerFactory,
                                              InvocationType)
-from pyomo.pysp.scenariotree.manager_worker_pyro import \
+from pysp.scenariotree.manager_worker_pyro import \
     ScenarioTreeManagerWorkerPyro
-from pyomo.pysp.scenariotree.server_pyro import (RegisterWorker,
+from pysp.scenariotree.server_pyro import (RegisterWorker,
                                                  ScenarioTreeServerPyro)
-from pyomo.pysp.scenariotree.tree_structure_model import \
+from pysp.scenariotree.tree_structure_model import \
     CreateConcreteTwoStageScenarioTreeModel
-from pyomo.pysp.scenariotree.instance_factory import \
+from pysp.scenariotree.instance_factory import \
     ScenarioTreeInstanceFactory
 
 from pyomo.environ import ConcreteModel, Var, Expression, Constraint, Objective, sum_product

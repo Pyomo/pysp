@@ -11,7 +11,7 @@ import uuid
 
 import pyutilib.th as unittest
 
-from pyomo.pysp.scenariotree.util import \
+from pysp.scenariotree.util import \
     (_max_int32,
      _max_uint32,
      _convert_range_one_to_max_int32,

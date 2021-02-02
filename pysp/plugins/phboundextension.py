@@ -16,10 +16,10 @@ from __future__ import division
 import os
 
 from pyomo.common.plugin import implements, alias, SingletonPlugin
-from pyomo.pysp import phextension
+from pysp import phextension
 from pyomo.core.base import minimize
 
-from pyomo.pysp.phboundbase import (_PHBoundBase,
+from pysp.phboundbase import (_PHBoundBase,
                                     ExtractInternalNodeSolutionsforInner)
 
 class _PHBoundExtensionImpl(_PHBoundBase):

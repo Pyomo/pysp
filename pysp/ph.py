@@ -27,17 +27,17 @@ from pyomo.opt import (UndefinedData,
                        TerminationCondition,
                        SolutionStatus)
 
-import pyomo.pysp.convergence
-from pyomo.pysp.phboundbase import (_PHBoundBase,
+import pysp.convergence
+from pysp.phboundbase import (_PHBoundBase,
                                     ExtractInternalNodeSolutionsforInner)
-from pyomo.pysp.dualphmodel import DualPHModel
-from pyomo.pysp.ef import create_ef_instance
-from pyomo.pysp.generators import \
+from pysp.dualphmodel import DualPHModel
+from pysp.ef import create_ef_instance
+from pysp.generators import \
      scenario_tree_node_variables_generator_noinstances
-from pyomo.pysp.phobjective import (add_ph_objective_weight_terms,
+from pysp.phobjective import (add_ph_objective_weight_terms,
                                     add_ph_objective_proximal_terms,
                                     form_linearized_objective_constraints)
-from pyomo.pysp.phutils import (create_block_symbol_maps,
+from pysp.phutils import (create_block_symbol_maps,
                                 reset_nonconverged_variables,
                                 reset_stage_cost_variables,
                                 reset_linearization_variables,
@@ -51,8 +51,8 @@ from pyomo.pysp.phutils import (create_block_symbol_maps,
                                 preprocess_block_constraints,
                                 extract_solve_times,
                                 _OLD_OUTPUT)
-from pyomo.pysp.util.misc import load_external_module
-from pyomo.pysp import phsolverserverutils
+from pysp.util.misc import load_external_module
+from pysp import phsolverserverutils
 
 from pyomo.opt.parallel.local import SolverManager_Serial
 
@@ -62,7 +62,7 @@ from six.moves import xrange
 guppy, guppy_available = attempt_import('guppy')
 
 
-logger = logging.getLogger('pyomo.pysp')
+logger = logging.getLogger('pysp')
 
 # PH iteratively solves scenario sub-problems, so we don't want to
 # waste a ton of time preprocessing unless some specific aspects of
@@ -2223,38 +2223,38 @@ class ProgressiveHedging(_PHBase):
         phboundextensions = \
             [plugin for plugin in self._ph_plugins \
              if isinstance(plugin,
-                           pyomo.pysp.plugins.phboundextension.\
+                           pysp.plugins.phboundextension.\
                            phboundextension)]
 
         convexhullboundextensions = \
             [plugin for plugin in self._ph_plugins \
              if isinstance(plugin,
-                           pyomo.pysp.plugins.convexhullboundextension.\
+                           pysp.plugins.convexhullboundextension.\
                            convexhullboundextension)]
 
         wwextensions = \
             [plugin for plugin in self._ph_plugins \
              if isinstance(plugin,
-                           pyomo.pysp.plugins.wwphextension.wwphextension)]
+                           pysp.plugins.wwphextension.wwphextension)]
 
         phhistoryextensions = \
             [plugin for plugin in self._ph_plugins \
              if isinstance(plugin,
-                           pyomo.pysp.plugins.phhistoryextension.\
+                           pysp.plugins.phhistoryextension.\
                            phhistoryextension)]
 
         userdefinedextensions = []
         for plugin in self._ph_plugins:
             if not (isinstance(plugin,
-                               pyomo.pysp.plugins.wwphextension.wwphextension) or \
+                               pysp.plugins.wwphextension.wwphextension) or \
                     isinstance(plugin,
-                               pyomo.pysp.plugins.phhistoryextension.\
+                               pysp.plugins.phhistoryextension.\
                                phhistoryextension) or \
                     isinstance(plugin,
-                               pyomo.pysp.plugins.phboundextension.\
+                               pysp.plugins.phboundextension.\
                                phboundextension) or \
                     isinstance(plugin,
-                               pyomo.pysp.plugins.convexhullboundextension.\
+                               pysp.plugins.convexhullboundextension.\
                                convexhullboundextension)):
                 userdefinedextensions.append(plugin)
 
@@ -2474,7 +2474,7 @@ class ProgressiveHedging(_PHBase):
                 initialization_action_handles.extend(
                     phsolverserverutils.transmit_external_function_invocation(
                         self,
-                        "pyomo.pysp.ph",
+                        "pysp.ph",
                         "assign_aggregate_data",
                         invocation_type=(phsolverserverutils.InvocationType.\
                                          SingleInvocation),
@@ -2607,7 +2607,7 @@ class ProgressiveHedging(_PHBase):
             if self._verbose:
                 print("Enabling convergence based on a fixed number of discrete variables")
             converger = \
-                (pyomo.pysp.convergence.\
+                (pysp.convergence.\
                  NumFixedDiscreteVarConvergence(
                      convergence_threshold=self._free_discrete_count_threshold))
             self._convergers.append(converger)
@@ -2617,7 +2617,7 @@ class ProgressiveHedging(_PHBase):
             if self._outer_bound_convergence_threshold == None:
                 raise RuntimeError("A convergence threshold must be specified when using the outer bound convergence criteron")
             converger = \
-                (pyomo.pysp.convergence.OuterBoundConvergence(
+                (pysp.convergence.OuterBoundConvergence(
                     convergence_threshold=self._outer_bound_convergence_threshold,
                     convergence_threshold_sense=(False if self._objective_sense == minimize else True)))
             self._convergers.append(converger)
@@ -2628,7 +2628,7 @@ class ProgressiveHedging(_PHBase):
             if self._inner_outer_convergence_threshold == None:
                 raise RuntimeError("A convergence threshold must be specified when using the inner-outer bound convergence criteron")
             converger = \
-                (pyomo.pysp.convergence.InnerOuterConvergence(
+                (pysp.convergence.InnerOuterConvergence(
                     convergence_threshold=self._inner_outer_convergence_threshold))
             self._convergers.append(converger)
 
@@ -2640,13 +2640,13 @@ class ProgressiveHedging(_PHBase):
                 print("Enabling convergence based on non-normalized "
                       "term diff criterion, as opposed to the normalized variant")
             converger = \
-                (pyomo.pysp.convergence.TermDiffConvergence(
+                (pysp.convergence.TermDiffConvergence(
                     convergence_threshold=self._termdiff_threshold))
             self._convergers.append(converger)
 
         if self._enable_normalized_termdiff_convergence and not self._enable_termdiff_convergence:
             converger = \
-                (pyomo.pysp.convergence.NormalizedTermDiffConvergence(
+                (pysp.convergence.NormalizedTermDiffConvergence(
                     convergence_threshold=self._termdiff_threshold))
             self._convergers.append(converger)
 
@@ -2654,7 +2654,7 @@ class ProgressiveHedging(_PHBase):
             if self._verbose:
                 print("Enabling convergence based on primal-dual residual criterion")
             self._convergers.append(
-                pyomo.pysp.convergence.PrimalDualResidualConvergence(
+                pysp.convergence.PrimalDualResidualConvergence(
                     convergence_threshold=self._primal_dual_residual_convergence_threshold))
 
         # indicate that we're ready to run.
@@ -4141,7 +4141,7 @@ class ProgressiveHedging(_PHBase):
 
             if not self._ph_warmstarted:
                 assert self._ph_warmstart_file is not None
-                from pyomo.pysp.plugins.phhistoryextension import (load_ph_warmstart,
+                from pysp.plugins.phhistoryextension import (load_ph_warmstart,
                                                                    load_history)
                 print("Loading PH warmstart from file: "+self._ph_warmstart_file)
                 scenario_tree_dict, history, iterations = \

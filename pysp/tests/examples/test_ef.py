@@ -21,7 +21,7 @@ except:
 
 import pyutilib.th as unittest
 
-from pyomo.pysp.tests.examples.ef_checker import main as validate_ef_main
+from pysp.tests.examples.ef_checker import main as validate_ef_main
 
 # Global test configuration options
 _test_name_wildcard_include = ["*"]
@@ -135,7 +135,7 @@ class EFTester(object):
         argstring = self.get_cmd_base()+" "\
                     "--model-directory="+self.model_directory+" "\
                     "--instance-directory="+self.instance_directory+" "\
-                    "--solution-writer=pyomo.pysp.plugins.jsonsolutionwriter "\
+                    "--solution-writer=pysp.plugins.jsonsolutionwriter "\
                     +options_string+" "\
                     "&> "+join(thisDir,prefix+".out")
         print("Testing command("+basename(prefix)+"): " + argstring)

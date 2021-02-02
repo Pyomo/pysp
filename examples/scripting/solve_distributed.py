@@ -39,7 +39,7 @@
 import os
 import sys
 from pyomo.environ import *
-from pyomo.pysp.scenariotree.manager import \
+from pysp.scenariotree.manager import \
     (ScenarioTreeManagerClientPyro,
      InvocationType)
 
@@ -52,7 +52,7 @@ num_scenarios = 3
 # costs and variables
 #
 def pysp_scenario_tree_model_callback():
-    from pyomo.pysp.scenariotree.tree_structure_model import \
+    from pysp.scenariotree.tree_structure_model import \
         CreateConcreteTwoStageScenarioTreeModel
 
     st_model = CreateConcreteTwoStageScenarioTreeModel(num_scenarios)

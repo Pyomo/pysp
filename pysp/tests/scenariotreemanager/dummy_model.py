@@ -11,7 +11,7 @@
 from pyomo.core import ConcreteModel, Var, Expression, ConstraintList, Objective, sum_product
 
 def pysp_scenario_tree_model_callback():
-    from pyomo.pysp.scenariotree.tree_structure_model \
+    from pysp.scenariotree.tree_structure_model \
         import CreateConcreteTwoStageScenarioTreeModel
 
     st_model = CreateConcreteTwoStageScenarioTreeModel(3)

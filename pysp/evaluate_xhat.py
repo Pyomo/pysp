@@ -13,20 +13,20 @@ import copy
 
 from pyomo.common import pyomo_command
 from pyomo.common.dependencies import yaml
-from pyomo.pysp.util.config import (PySPConfigValue,
+from pysp.util.config import (PySPConfigValue,
                                     PySPConfigBlock,
                                     safe_register_common_option,
                                     safe_register_unique_option,
                                     _extension_options_group_title,
                                     _domain_must_be_str)
-from pyomo.pysp.util.misc import (parse_command_line,
+from pysp.util.misc import (parse_command_line,
                                   launch_command,
                                   sort_extensions_by_precedence)
-from pyomo.pysp.scenariotree.manager import \
+from pysp.scenariotree.manager import \
     ScenarioTreeManagerFactory
-from pyomo.pysp.scenariotree.manager_solver import \
+from pysp.scenariotree.manager_solver import \
     ScenarioTreeManagerSolverFactory
-from pyomo.pysp.solutionioextensions import \
+from pysp.solutionioextensions import \
     (IPySPSolutionSaverExtension,
      IPySPSolutionLoaderExtension)
 
@@ -56,7 +56,7 @@ def evaluate_current_node_solution(sp, sp_solver, **solve_kwds):
                     tree_node.fix_variable(variable_id,
                                            tree_node._solution[variable_id])
                 else:
-                    from pyomo.pysp.phutils import indexToString
+                    from pysp.phutils import indexToString
                     name, index = tree_node._variable_ids[variable_id]
                     raise ValueError(
                         "Scenario tree variable with name %s (scenario_tree_id=%s) "
@@ -267,14 +267,14 @@ scenario tree.  A solution is provided by specifying one or
 more plugins implementing the IPySPSolutionLoaderExtension. E.g.,
 
 evaluate_xhat -m ReferenceModel.py -s ScenarioStructure.dat \\
-              --solution-loader-extension=pyomo.pysp.plugins.jsonio \\
+              --solution-loader-extension=pysp.plugins.jsonio \\
               --jsonloader-input-name xhat.json
 
 To include plugin specific options in the list of options
 output after this message, declare them on the command-line
 before the --help flag. E.g.,
 
-evaluate_xhat --solution-loader-extension=pyomo.pysp.plugins.jsonio \\
+evaluate_xhat --solution-loader-extension=pysp.plugins.jsonio \\
               --help
 
 This script will fix all non-derived, non-leaf stage

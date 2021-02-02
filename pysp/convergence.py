@@ -11,7 +11,7 @@
 import copy
 from math import fabs
 
-from pyomo.pysp.generators import \
+from pysp.generators import \
     scenario_tree_node_variables_generator_noinstances
 
 from six import iterkeys

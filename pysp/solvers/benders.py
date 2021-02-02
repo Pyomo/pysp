@@ -42,8 +42,8 @@ from pyomo.core import (value, minimize, Set,
                         Expression, Suffix, Reals, Param)
 from pyomo.core.base.constraint import _GeneralConstraintData
 from pyomo.core.beta.list_objects import XConstraintList
-from pyomo.pysp.util.configured_object import PySPConfiguredObject
-from pyomo.pysp.util.config import (PySPConfigValue,
+from pysp.util.configured_object import PySPConfiguredObject
+from pysp.util.config import (PySPConfigValue,
                                     PySPConfigBlock,
                                     safe_register_common_option,
                                     safe_declare_common_option,
@@ -55,17 +55,17 @@ from pyomo.pysp.util.config import (PySPConfigValue,
                                     _domain_unit_interval,
                                     _domain_tuple_of_str,
                                     _domain_tuple_of_str_or_dict)
-from pyomo.pysp.util.misc import (parse_command_line,
+from pysp.util.misc import (parse_command_line,
                                   launch_command)
-from pyomo.pysp.scenariotree.manager import \
+from pysp.scenariotree.manager import \
     (InvocationType,
      ScenarioTreeManager,
      ScenarioTreeManagerFactory)
-from pyomo.pysp.scenariotree.manager_solver import \
+from pysp.scenariotree.manager_solver import \
     ScenarioTreeManagerSolverFactory
-from pyomo.pysp.phutils import find_active_objective
-from pyomo.pysp.ef import create_ef_instance
-from pyomo.pysp.solvers.spsolver import (SPSolver,
+from pysp.phutils import find_active_objective
+from pysp.ef import create_ef_instance
+from pysp.solvers.spsolver import (SPSolver,
                                          SPSolverResults,
                                          SPSolverFactory)
 
@@ -74,7 +74,7 @@ from six.moves import xrange
 thisfile = os.path.abspath(__file__)
 thisfile.replace(".pyc","").replace(".py","")
 
-logger = logging.getLogger('pyomo.pysp')
+logger = logging.getLogger('pysp')
 
 _benders_group_label = "Benders Options"
 
@@ -1458,5 +1458,5 @@ def main(args=None):
 SPSolverFactory.register_solver("benders", BendersSolver)
 
 if __name__ == "__main__":
-    import pyomo.pysp
+    import pysp
     sys.exit(main())

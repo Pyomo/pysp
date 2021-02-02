@@ -8,13 +8,13 @@
 #  This software is distributed under the 3-clause BSD License.
 #  ___________________________________________________________________________
 
-import pyomo.pysp.solvers.spsolver
-from pyomo.pysp.solvers.spsolver import SPSolverFactory
-import pyomo.pysp.solvers.spsolvershellcommand
+import pysp.solvers.spsolver
+from pysp.solvers.spsolver import SPSolverFactory
+import pysp.solvers.spsolvershellcommand
 
-import pyomo.pysp.solvers.sd
-import pyomo.pysp.solvers.admm
-import pyomo.pysp.solvers.benders
-import pyomo.pysp.solvers.ef
-import pyomo.pysp.solvers.schuripopt
-import pyomo.pysp.solvers.ddsip
+import pysp.solvers.sd
+import pysp.solvers.admm
+import pysp.solvers.benders
+import pysp.solvers.ef
+import pysp.solvers.schuripopt
+import pysp.solvers.ddsip

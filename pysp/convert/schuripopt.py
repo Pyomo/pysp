@@ -15,23 +15,23 @@ import logging
 from pyomo.opt import ProblemFormat
 from pyomo.core import (Block,
                         Suffix)
-from pyomo.pysp.scenariotree.manager import InvocationType
-from pyomo.pysp.util.config import (PySPConfigValue,
+from pysp.scenariotree.manager import InvocationType
+from pysp.util.config import (PySPConfigValue,
                                     PySPConfigBlock,
                                     safe_register_common_option,
                                     safe_register_unique_option,
                                     _domain_must_be_str)
-from pyomo.pysp.scenariotree.manager import \
+from pysp.scenariotree.manager import \
     (ScenarioTreeManagerClientSerial,
      ScenarioTreeManagerClientPyro)
-from pyomo.pysp.scenariotree.util import \
+from pysp.scenariotree.util import \
     scenario_tree_id_to_pint32
-from pyomo.pysp.util.misc import (parse_command_line,
+from pysp.util.misc import (parse_command_line,
                                   launch_command)
 
 thisfile = os.path.abspath(__file__)
 
-logger = logging.getLogger('pyomo.pysp')
+logger = logging.getLogger('pysp')
 
 _objective_weight_suffix_name = "schurip_objective_weight"
 _variable_id_suffix_name = "schurip_variable_id"

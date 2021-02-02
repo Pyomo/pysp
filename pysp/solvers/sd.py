@@ -35,8 +35,8 @@ from pyomo.core import maximize
 from pyomo.opt import (TerminationCondition,
                        SolverStatus,
                        SolutionStatus)
-from pyomo.pysp.util.configured_object import PySPConfiguredObject
-from pyomo.pysp.util.config import (PySPConfigValue,
+from pysp.util.configured_object import PySPConfiguredObject
+from pysp.util.config import (PySPConfigValue,
                                     PySPConfigBlock,
                                     safe_register_common_option,
                                     safe_declare_common_option,
@@ -44,18 +44,18 @@ from pyomo.pysp.util.config import (PySPConfigValue,
                                     _domain_positive,
                                     _domain_positive_integer,
                                     _domain_nonnegative_integer)
-from pyomo.pysp.util.misc import (parse_command_line,
+from pysp.util.misc import (parse_command_line,
                                   launch_command)
-from pyomo.pysp.scenariotree.manager import \
+from pysp.scenariotree.manager import \
     ScenarioTreeManagerFactory
-import pyomo.pysp.convert.smps
-from pyomo.pysp.embeddedsp import EmbeddedSP
-from pyomo.pysp.solvers.spsolver import (SPSolverResults,
+import pysp.convert.smps
+from pysp.embeddedsp import EmbeddedSP
+from pysp.solvers.spsolver import (SPSolverResults,
                                          SPSolverFactory)
-from pyomo.pysp.solvers.spsolvershellcommand import \
+from pysp.solvers.spsolvershellcommand import \
     SPSolverShellCommand
 
-logger = logging.getLogger('pyomo.pysp')
+logger = logging.getLogger('pysp')
 
 _sd_group_label = "SD Options"
 
@@ -449,7 +449,7 @@ class SDSolver(SPSolverShellCommand, PySPConfiguredObject):
         #
 
         if isinstance(sp, EmbeddedSP):
-            input_files, _ = pyomo.pysp.convert.smps.\
+            input_files, _ = pysp.convert.smps.\
                 convert_embedded(
                     sdinput_directory,
                     "pysp_model",
@@ -457,7 +457,7 @@ class SDSolver(SPSolverShellCommand, PySPConfiguredObject):
                     core_format='mps',
                     io_options=kwds)
         else:
-            input_files = pyomo.pysp.convert.smps.\
+            input_files = pysp.convert.smps.\
                 convert_external(
                     sdinput_directory,
                     "pysp_model",

@@ -11,7 +11,7 @@
 import sys
 import os
 
-from pyomo.pysp.plugins.phhistoryextension import load_history
+from pysp.plugins.phhistoryextension import load_history
 
 import matplotlib.pylab as plt
 

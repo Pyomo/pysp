@@ -14,9 +14,9 @@ import pprint
 
 import pyomo.common
 from pyomo.common.tempfiles import TempfileManager
-from pyomo.pysp.solvers.spsolver import SPSolver
+from pysp.solvers.spsolver import SPSolver
 
-logger = logging.getLogger('pyomo.pysp')
+logger = logging.getLogger('pysp')
 
 class SPSolverShellCommand(SPSolver):
 

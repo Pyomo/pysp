@@ -13,10 +13,10 @@ __all__ = ("ScenarioTreeManagerWorkerPyro",)
 import time
 
 from pyomo.common.dependencies import dill, dill_available
-from pyomo.pysp.util.configured_object import PySPConfiguredObject
-from pyomo.pysp.util.config import (PySPConfigBlock,
+from pysp.util.configured_object import PySPConfiguredObject
+from pysp.util.config import (PySPConfigBlock,
                                     safe_declare_common_option)
-from pyomo.pysp.scenariotree.manager \
+from pysp.scenariotree.manager \
     import (_ScenarioTreeManagerWorker,
             ScenarioTreeManager,
             InvocationType)
@@ -415,6 +415,6 @@ class ScenarioTreeManagerWorkerPyro(_ScenarioTreeManagerWorker,
         setattr(self, name, data)
 
 # register this worker with the pyro server
-from pyomo.pysp.scenariotree.server_pyro import RegisterWorker
+from pysp.scenariotree.server_pyro import RegisterWorker
 RegisterWorker('ScenarioTreeManagerWorkerPyro',
                ScenarioTreeManagerWorkerPyro)

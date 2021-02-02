@@ -30,7 +30,7 @@ Pyro4 = attempt_import('Pyro4')[0]
 import six
 from six import advance_iterator, iteritems, itervalues
 
-logger = logging.getLogger('pyomo.pysp')
+logger = logging.getLogger('pysp')
 
 #
 # a specialized asynchronous action manager for the scenariotreeserver
