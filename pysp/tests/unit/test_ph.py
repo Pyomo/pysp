@@ -47,6 +47,8 @@ import pysp.phinit
 import pysp.ef_writer_script
 import pyomo.environ
 
+from pyomo.common.dependencies import yaml_available
+
 _diff_tolerance = 1e-5
 _diff_tolerance_relaxed = 1e-3
 

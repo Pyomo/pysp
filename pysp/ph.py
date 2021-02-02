@@ -55,6 +55,7 @@ from pysp.util.misc import load_external_module
 from pysp import phsolverserverutils
 
 from pyomo.opt.parallel.local import SolverManager_Serial
+import pyomo.solvers.plugins.smanager
 
 from six import iterkeys, itervalues, iteritems
 from six.moves import xrange
