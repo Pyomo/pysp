@@ -16,6 +16,8 @@ subsequently been replaced by
 [mpi-sppy](https://github.com/Pyomo/mpi-sppy)
 as the recommended extension for optimization under uncertainty in Pyomo.
 
+We plan to make PySP available at least until some time in 2023.
+
 ### Developers
 
 PySP was split out of the main Pyomo repository in February,
