@@ -54,7 +54,7 @@ class Testrapper(unittest.TestCase):
         r = p.find("'", l+1)
         pyomorootpath = p[l+1:r]
         farmpath = pyomorootpath + os.sep + ".." + os.sep + "examples" + \
-                   os.sep + "pysp" + os.sep + "farmer"
+                   os.sep + "farmer"
         farmpath = os.path.abspath(farmpath)
         
         self.farmer_concrete_file = farmpath + os.sep + \
