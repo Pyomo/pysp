@@ -1102,6 +1102,7 @@ def run_ph(options, ph):
                         ph._scenario_tree,
                         scenario)
 
+            import pysp.phsolverserverutils
             pysp.phsolverserverutils.\
                 warmstart_scenario_instances(ph)
 
