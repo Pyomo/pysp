@@ -12,9 +12,9 @@ optimization modeling package for formulating and solving stochastic
 programming optimization problems.
 
 PySP was originally developed within the Pyomo project and has
-subsequently been replaced by [mpi-sppy]
-(https://github.com/Pyomo/mpi-sppy) as the recommended extension for
-optimization-under-uncertainty in Pyomo.
+subsequently been replaced by
+[mpi-sppy](https://github.com/Pyomo/mpi-sppy)
+as the recommended extension for optimization under uncertainty in Pyomo.
 
 ### Developers
 
