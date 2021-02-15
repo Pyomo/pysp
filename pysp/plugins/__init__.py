@@ -21,3 +21,4 @@ def load():
     import pysp.plugins.ddextensionnew
     import pysp.plugins.adaptive_rho_converger
     import pysp.plugins.jsonio
+    import pysp.plugins.phpyro
