@@ -30,8 +30,7 @@ def read(*rnames):
 def get_version():
     # Source pyomo/version/info.py to get the version number
     _verInfo = dict(globals())
-    _verFile = os.path.join(os.path.dirname(__file__),
-                            'pyomo','version','info.py')
+    _verFile = os.path.join(os.path.dirname(__file__), 'pysp', 'version.py')
     with open(_verFile) as _FILE:
         exec(_FILE.read(), _verInfo)
     return _verInfo['__version__']
@@ -43,7 +42,7 @@ def run_setup():
       #
       # Note: the release number is set in pyomo/version/info.py
       #
-      version="0.1",
+      version=get_version(),
       maintainer='Pyomo Developer Team',
       maintainer_email='pyomo-developers@googlegroups.com',
       url='https://github.com/Pyomo/pysp',
