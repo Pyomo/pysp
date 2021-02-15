@@ -282,8 +282,7 @@ class phhistoryextension(SingletonPlugin):
         # has already been set to transmit more, then we are fine.
         # (hence the |=)
         if isinstance(ph._solver_manager,
-                      pyomo.solvers.plugins.\
-                      smanager.phpyro.SolverManager_PHPyro):
+                      pysp.plugins.phpyro.SolverManager_PHPyro):
             print("Overriding default variable transmission settings "
                   "for PHPyro to transmit leaf-stage variable values "
                   "at intermediate PH iterations.")

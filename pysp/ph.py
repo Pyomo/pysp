@@ -1212,7 +1212,7 @@ class ProgressiveHedging(_PHBase):
             return
 
         if isinstance(self._solver_manager,
-                      pypp.plugins.phpyro.SolverManager_PHPyro):
+                      pysp.plugins.phpyro.SolverManager_PHPyro):
 
             phsolverserverutils.release_phsolverservers(self)
 

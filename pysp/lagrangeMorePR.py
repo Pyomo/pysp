@@ -39,7 +39,7 @@ def run(args=None):
 
    # to import plugins
    import pyomo.environ
-   import pyomo.solvers.plugins.smanager.phpyro
+   import pysp.plugins.phpyro
 
    def LagrangeMorePR(args=None):
       print("lagrangeMorePR begins %s" % datetime_string())
@@ -439,7 +439,7 @@ def run(args=None):
                        "type="+options.solver_manager_type+
                        " specified in call to PH constructor")
    if isinstance(solver_manager,
-                 pyomo.solvers.plugins.smanager.phpyro.SolverManager_PHPyro):
+                 pysp.plugins.phpyro.SolverManager_PHPyro):
       raise ValueError("PHPyro can not be used as the solver manager")
 
    try:
