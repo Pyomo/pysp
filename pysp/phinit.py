@@ -672,8 +672,8 @@ def GenerateScenarioTreeForPH(options,
 def PHAlgorithmBuilder(options, scenario_tree):
 
     import pyomo.environ
-    import pyomo.solvers.plugins.smanager.phpyro
     import pyomo.solvers.plugins.smanager.pyro
+    import pysp.plugins.phpyro
 
     solution_writer_plugins = ExtensionPoint(ISolutionWriterExtension)
     for plugin in solution_writer_plugins:
@@ -851,7 +851,7 @@ def PHAlgorithmBuilder(options, scenario_tree):
         ph = ProgressiveHedging(options)
 
         if isinstance(solver_manager,
-                      pyomo.solvers.plugins.smanager.phpyro.SolverManager_PHPyro):
+                      pysp.plugins.phpyro.SolverManager_PHPyro):
 
             if scenario_tree.contains_bundles():
                 num_jobs = len(scenario_tree._scenario_bundles)
@@ -887,7 +887,7 @@ def PHAlgorithmBuilder(options, scenario_tree):
         if solver_manager is not None:
 
             if isinstance(solver_manager,
-                          pyomo.solvers.plugins.smanager.phpyro.SolverManager_PHPyro):
+                          pysp.plugins.phpyro.SolverManager_PHPyro):
                 solver_manager.release_servers(shutdown=ph._shutdown_pyro_workers)
             elif isinstance(solver_manager,
                           pyomo.solvers.plugins.smanager.pyro.SolverManager_Pyro):
@@ -973,11 +973,11 @@ def PHCleanup(ph):
     if ph._solver_manager is not None:
 
         import pyomo.environ
-        import pyomo.solvers.plugins.smanager.phpyro
         import pyomo.solvers.plugins.smanager.pyro
+        import pysp.plugins.phpyro
 
         if isinstance(ph._solver_manager,
-                      pyomo.solvers.plugins.smanager.phpyro.SolverManager_PHPyro):
+                      pysp.plugins.phpyro.SolverManager_PHPyro):
             ph._solver_manager.release_servers(shutdown=ph._shutdown_pyro_workers)
         elif isinstance(ph._solver_manager,
                         pyomo.solvers.plugins.smanager.pyro.SolverManager_Pyro):
@@ -998,8 +998,8 @@ def PHCleanup(ph):
 def run_ph(options, ph):
 
     import pyomo.environ
-    import pyomo.solvers.plugins.smanager.phpyro
     import pyomo.solvers.plugins.smanager.pyro
+    import pysp.plugins.phpyro
 
     start_time = time.time()
 
