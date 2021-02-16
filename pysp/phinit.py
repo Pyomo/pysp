@@ -1052,8 +1052,7 @@ def run_ph(options, ph):
     if (options.write_ef) or (options.solve_ef):
 
         if not isinstance(ph._solver_manager,
-                          pyomo.solvers.plugins.smanager.\
-                          phpyro.SolverManager_PHPyro):
+                          pysp.plugins.phpyro.SolverManager_PHPyro):
 
             # The instances are about to be added as sublocks to the
             # extensive form instance. If bundles exist, we must

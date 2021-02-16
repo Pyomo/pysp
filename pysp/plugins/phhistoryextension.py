@@ -21,7 +21,7 @@ from pyomo.common.plugin import implements, alias, SingletonPlugin
 from pysp import phextension
 from pysp.phutils import indexToString
 from pysp.phsolverserverutils import TransmitType
-import pyomo.solvers.plugins.smanager
+import pysp.plugins.phpyro
 
 from six import iteritems
 

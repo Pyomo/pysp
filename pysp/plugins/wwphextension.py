@@ -22,6 +22,7 @@ from pysp.phsolverserverutils import \
     transmit_external_function_invocation_to_worker
 from pysp.generators import \
     scenario_tree_node_variables_generator_noinstances
+import pysp.plugins.phpyro
 
 import six
 from six import iteritems
