@@ -913,7 +913,7 @@ class ddextension(pyomo.common.plugin.SingletonPlugin):
         print(("\nUsing %s as reference scenario" % (reference_scenario_name)))
 
         if isinstance(ph._solver_manager,
-                      pyomo.solvers.plugins.smanager.phpyro.SolverManager_PHPyro):
+                      pysp.plugins.phpyro.SolverManager_PHPyro):
 
             if ph._scenario_tree.contains_bundles():
 

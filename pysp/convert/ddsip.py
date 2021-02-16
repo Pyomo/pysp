@@ -713,7 +713,7 @@ def convert_external(output_directory,
                      keep_scenario_files=False,
                      verbose=False):
     import pyomo.environ
-    import pyomo.solvers.plugins.smanager.phpyro
+    import pysp.plugins.phpyro
 
     if io_options is None:
         io_options = {}

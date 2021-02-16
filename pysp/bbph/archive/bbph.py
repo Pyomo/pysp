@@ -11,7 +11,7 @@
 import pyomo.environ
 from pysp import ph, phinit, phutils
 from pyomo.core.base import maximize, minimize
-import pyomo.solvers.plugins.smanager.phpyro
+import pysp.plugins.phpyro
 from pysp import phsolverserverutils
 
 import os
@@ -180,8 +180,7 @@ class BBPH_node(object):
     def _collect_node_variable_bounds(self, ph, tree_node):
 
         if not isinstance(ph._solver_manager,
-                          pyomo.solvers.plugins.\
-                          smanager.phpyro.SolverManager_PHPyro):
+                          pysp.plugins.phpyro.SolverManager_PHPyro):
 
             tree_node._variable_bounds = \
                 collect_node_variable_bounds(tree_node)
@@ -421,8 +420,7 @@ class BBPH_node(object):
             # transmit the var bounds
             if self.BranchTupleList is not None:
                 if isinstance(phobject._solver_manager,
-                              pyomo.solvers.plugins.smanager.\
-                              phpyro.SolverManager_PHPyro):
+                              pysp.plugins.phpyro.SolverManager_PHPyro):
                     ahs = phsolverserverutils.transmit_external_function_invocation(
                         phobject,
                         thisfile,

@@ -10,12 +10,12 @@
 *.egg-info
 
 # Documentation builds
-doc/OnlineDocs/_build
-doc/OnlineDocs/**/*.spy
+doc/_build
+doc/**/*.spy
 
 # Running pyomo / tests / solvers occasionally leaves extra files
+TEST-pysp.xml
 *.out
-pyomo/dataportal/parse_table_datacmds.py
 gurobi.log
 
 # Results from nosetests --with-coverage

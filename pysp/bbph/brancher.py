@@ -13,7 +13,7 @@ import pickle # so we can send index across with its type (I hope)
 
 import pyomo.common.plugin
 from pysp import phextension
-import pyomo.solvers.plugins.smanager.phpyro
+import pysp.plugins.phpyro
 from pysp import phsolverserverutils
 
 from six import iteritems
@@ -279,8 +279,7 @@ class brancherextension(pyomo.common.plugin.SingletonPlugin):
     def _collect_node_variable_bounds(self, ph, tree_node):
 
         if not isinstance(ph._solver_manager,
-                          pyomo.solvers.plugins.\
-                          smanager.phpyro.SolverManager_PHPyro):
+                          pysp.plugins.phpyro.SolverManager_PHPyro):
 
             tree_node._variable_bounds = \
                 collect_node_variable_bounds(tree_node)

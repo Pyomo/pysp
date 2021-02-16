@@ -22,6 +22,7 @@ from pysp.phsolverserverutils import \
     transmit_external_function_invocation_to_worker
 from pysp.generators import \
     scenario_tree_node_variables_generator_noinstances
+import pysp.plugins.phpyro
 
 import six
 from six import iteritems
@@ -325,7 +326,7 @@ class wwphextension(pyomo.common.plugin.SingletonPlugin):
     def _collect_variable_bounds(self,ph):
 
         if not isinstance(ph._solver_manager,
-                          pyomo.solvers.plugins.smanager.phpyro.SolverManager_PHPyro):
+                          pysp.plugins.phpyro.SolverManager_PHPyro):
 
             for stage in ph._scenario_tree._stages[:-1]:
 

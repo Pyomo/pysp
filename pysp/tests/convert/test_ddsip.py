@@ -46,7 +46,7 @@ class TestConvertDDSIPSimple(unittest.TestCase):
                 self.fail("File %s does not contain test string:\n%s\n"
                           "------------------------------------------\n"
                           "File data:\n%s\n"
-                          % (filename, checkstr, fdata))
+                          % (filename, checkstr, fdata.decode('utf-8')))
 
     @unittest.nottest
     def _get_cmd(self,

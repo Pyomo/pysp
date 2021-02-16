@@ -25,7 +25,7 @@ from pysp.plugins.ddextensionnew import (MatrixEntriesClass,
                                                LPFileObjClass,
                                                LPFileConstraintClass)
 from pysp.phutils import create_block_symbol_maps
-from pyomo.solvers.plugins.smanager.phpyro import SolverManager_PHPyro
+from pysp.plugins.phpyro import SolverManager_PHPyro
 
 from six import iteritems
 
