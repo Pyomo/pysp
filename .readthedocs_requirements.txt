@@ -1,0 +1,2 @@
+git+https://github.com/PyUtilib/pyutilib
+git+https://github.com/Pyomo/pyomo
