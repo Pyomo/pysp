@@ -5,6 +5,7 @@
 [![GitHub contributors](https://img.shields.io/github/contributors/pyomo/pysp.svg)](https://github.com/pyomo/pysp/graphs/contributors)
 [![Merged PRs](https://img.shields.io/github/issues-pr-closed-raw/pyomo/pysp.svg?label=merged+PRs)](https://github.com/pyomo/pysp/pulls?q=is:pr+is:merged)
 [![Issue stats](http://isitmaintained.com/badge/resolution/Pyomo/pysp.svg)](http://isitmaintained.com/project/pyomo/pysp)
+[![Documentation Status](https://readthedocs.org/projects/pysp/badge/?version=latest)](https://pysp.readthedocs.io/en/latest/?badge=latest)
 
 ## PySP Overview
 PySP is an extension to the [Pyomo](https://github.com/Pyomo/pyomo)
