@@ -93,6 +93,11 @@ def run_setup():
         phsolverserver=pysp.phsolverserver:main
         scenariotreeserver=pysp.scenariotree.server_pyro:main
         computeconf=pysp.computeconf:main
+        pyro_mip_server = pysp.pyro.pyro_mip_server:main
+        pyomo_ns = pysp.pyro.pyro_commands:pyomo_ns
+        pyomo_nsc = pysp.pyro.pyro_commands:pyomo_nsc
+        kill_pyro_mip_servers = pysp.pyro.pyro_commands:kill_pyro_mip_servers
+        launch_pyro_mip_servers = pysp.pyro.pyro_commands:launch_pyro_mip_servers
       """
       )
 
