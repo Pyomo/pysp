@@ -24,14 +24,14 @@ from pyomo.common.tempfiles import TempfileManager
 import pyomo.opt
 from pyomo.environ import (ConcreteModel, RangeSet, Var,
                            Objective, Constraint, sum_product)
-import pyomo.scripting.pyro_mip_server
+import pysp.pyro.pyro_mip_server
 
 
 currdir = dirname(abspath(__file__))+os.sep
 
 solvers = pyomo.opt.check_available_solvers('glpk')
 
-class TestWorker(pyomo.scripting.pyro_mip_server.PyomoMIPWorker):
+class TestWorker(pysp.pyro.pyro_mip_server.PyomoMIPWorker):
 
     def __init__(self):
         self._verbose = True

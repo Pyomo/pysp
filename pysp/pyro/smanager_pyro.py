@@ -24,7 +24,7 @@ from pyomo.opt.base import OptSolver, SolverFactory
 from pyomo.opt.parallel.manager import ActionManagerError, ActionStatus
 from pyomo.opt.parallel.async_solver import (AsynchronousSolverManager,
                                              SolverManagerFactory)
-from pyomo.opt.parallel.pyro import PyroAsynchronousActionManager
+from pysp.pyro.pyro_asynch import PyroAsynchronousActionManager
 from pyomo.core.base import Block
 import pyomo.core.base.suffix
 
