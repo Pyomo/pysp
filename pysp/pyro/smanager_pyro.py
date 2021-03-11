@@ -97,7 +97,7 @@ class SolverManager_Pyro(PyroAsynchronousActionManager, AsynchronousSolverManage
                 else:
                     assert isinstance(arg, IBlock)
                     model_suffixes = list(comp.storage_key for comp \
-                                          in pyomo.core.base.suffix.\
+                                          in pyomo.core.kernel.suffix.\
                                           import_suffix_generator(arg,
                                                                   active=True,
                                                                   descend_into=False))
