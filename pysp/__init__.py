@@ -13,6 +13,7 @@ from pysp.version import __version__
 from pyomo.common.plugin import PluginGlobals
 PluginGlobals.add_env("pyomo")
 
+import pysp.pyro.smanager_pyro
 import pysp.annotations
 import pysp.solutionioextensions
 import pysp.util
