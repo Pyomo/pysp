@@ -52,6 +52,7 @@ from pysp.scenariotree.manager import \
     ScenarioTreeManagerClientPyro
 from pysp.scenariotree.manager_solver import \
     ScenarioTreeManagerSolverClientPyro
+import pysp.pyro.smanager_pyro
 
 logger = logging.getLogger('pysp')
 
@@ -175,15 +176,14 @@ class ExtensiveFormAlgorithm(PySPConfiguredObject):
         self.destroy_ef()
         if self._solver_manager is not None:
             if isinstance(self._solver_manager,
-                          pyomo.solvers.plugins.smanager.\
-                          pyro.SolverManager_Pyro):
+                          pysp.pyro.smanager_pyro.SolverManager_Pyro):
                 if self.get_option("pyro_shutdown_workers"):
                       self._solver_manager.shutdown_workers()
         self._solver_manager = None
         self._manager = None
 
     def __init__(self, manager, *args, **kwds):
-        import pyomo.solvers.plugins.smanager.pyro
+        import pysp.pyro.smanager_pyro
         super(ExtensiveFormAlgorithm, self).__init__(*args, **kwds)
 
         # TODO: after PH moves over to the new code

@@ -672,7 +672,7 @@ def GenerateScenarioTreeForPH(options,
 def PHAlgorithmBuilder(options, scenario_tree):
 
     import pyomo.environ
-    import pyomo.solvers.plugins.smanager.pyro
+    import pysp.pyro.smanager_pyro
     import pysp.plugins.phpyro
 
     solution_writer_plugins = ExtensionPoint(ISolutionWriterExtension)
@@ -890,7 +890,7 @@ def PHAlgorithmBuilder(options, scenario_tree):
                           pysp.plugins.phpyro.SolverManager_PHPyro):
                 solver_manager.release_servers(shutdown=ph._shutdown_pyro_workers)
             elif isinstance(solver_manager,
-                          pyomo.solvers.plugins.smanager.pyro.SolverManager_Pyro):
+                          pysp.pyro.smanager_pyro.SolverManager_Pyro):
                 if ph._shutdown_pyro_workers:
                     solver_manager.shutdown_workers()
 
@@ -973,14 +973,14 @@ def PHCleanup(ph):
     if ph._solver_manager is not None:
 
         import pyomo.environ
-        import pyomo.solvers.plugins.smanager.pyro
+        import pysp.pyro.smanager_pyro
         import pysp.plugins.phpyro
 
         if isinstance(ph._solver_manager,
                       pysp.plugins.phpyro.SolverManager_PHPyro):
             ph._solver_manager.release_servers(shutdown=ph._shutdown_pyro_workers)
         elif isinstance(ph._solver_manager,
-                        pyomo.solvers.plugins.smanager.pyro.SolverManager_Pyro):
+                        pysp.pyro.smanager_pyro.SolverManager_Pyro):
             if ph._shutdown_pyro_workers:
                 ph._solver_manager.shutdown_workers()
 
@@ -998,7 +998,7 @@ def PHCleanup(ph):
 def run_ph(options, ph):
 
     import pyomo.environ
-    import pyomo.solvers.plugins.smanager.pyro
+    import pysp.pyro.smanager_pyro
     import pysp.plugins.phpyro
 
     start_time = time.time()
