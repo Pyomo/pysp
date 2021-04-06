@@ -339,7 +339,7 @@ jobs:
         echo ""
         echo "Install Pyomo..."
         echo ""
-        $PYTHON_EXE -m pip install git+https://github.com/Pyomo/pyomo
+        $PYTHON_EXE -m pip install git+https://github.com/mrmundt/pyomo.git@pysp-fix
         echo ""
         echo "Install PySP..."
         echo ""
