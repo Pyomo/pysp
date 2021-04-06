@@ -22,7 +22,7 @@ except:
 
 from pyomo.common.dependencies import attempt_import
 from pyomo.opt.parallel.manager import ActionStatus
-from pyomo.opt.parallel.pyro import PyroAsynchronousActionManager
+from pysp.pyro.pyro_asynch import PyroAsynchronousActionManager
 
 pyu_pyro = attempt_import('pyutilib.pyro', alt_names=['pyu_pyro'])[0]
 Pyro4 = attempt_import('Pyro4')[0]
