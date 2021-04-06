@@ -277,6 +277,7 @@ jobs:
       run: |
         IPOPT_DIR=$TPL_DIR/ipopt
         echo "$IPOPT_DIR" >> $GITHUB_PATH
+        echo "LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$IPOPT_DIR" >> $GITHUB_ENV
         mkdir -p $IPOPT_DIR
         IPOPT_TAR=${DOWNLOAD_DIR}/ipopt.tar.gz
         if test ! -e $IPOPT_TAR; then
@@ -339,7 +340,7 @@ jobs:
         echo ""
         echo "Install Pyomo..."
         echo ""
-        $PYTHON_EXE -m pip install git+https://github.com/mrmundt/pyomo.git@pysp-fix
+        $PYTHON_EXE -m pip install git+https://github.com/Pyomo/pyomo
         echo ""
         echo "Install PySP..."
         echo ""
