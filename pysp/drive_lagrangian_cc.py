@@ -34,7 +34,7 @@ def run(args=None):
 ##########################================================#########
    # to import plugins
    import pyomo.environ
-   import pyomo.solvers.plugins.smanager.pyro
+   import pysp.pyro.smanager_pyro
    import pysp.plugins.phpyro
 
    def partialLagrangeParametric(args=None):
