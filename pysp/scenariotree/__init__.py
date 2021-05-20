@@ -19,6 +19,8 @@ from pyomo.core import (value, minimize, maximize,
                         ComponentUID)
 from pyomo.core.base.sos import _SOSConstraintData
 from pyomo.repn import generate_standard_repn
+from pyomo.scripting.interface import IPyomoScriptModifyInstance
+
 from pysp.phutils import (BasicSymbolMap,
                                 indexToString,
                                 isVariableNameIndexed,
@@ -32,7 +34,6 @@ from pysp.scenariotree.tree_structure import (_CUIDLabeler,
                                                     ScenarioTreeBundle,
                                                     ScenarioTree)
 from pysp.scenariotree.instance_factory import (DataPortal, Block,
-                                                      IPyomoScriptModifyInstance,
                                                       AbstractModel, _BlockData,
                                                       ExtensionPoint,
                                                       load_external_module,

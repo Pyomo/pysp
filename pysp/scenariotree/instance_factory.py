@@ -22,12 +22,12 @@ from pyutilib.misc import (ArchiveReaderFactory,
 
 from pyomo.dataportal import DataPortal
 from pyomo.core import (Block,
-                        IPyomoScriptModifyInstance,
                         AbstractModel)
 from pyomo.core.base.block import _BlockData
 from pyomo.common.dependencies import yaml, yaml_available, yaml_load_args
 from pyomo.common.gc_manager import PauseGC
 from pyomo.common.plugin import ExtensionPoint
+from pyomo.scripting.interface import IPyomoScriptModifyInstance
 from pysp.util.misc import load_external_module
 from pysp.scenariotree.tree_structure_model import \
     (CreateAbstractScenarioTreeModel,
