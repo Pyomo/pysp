@@ -18,7 +18,8 @@ from pyomo.core import (ConcreteModel,
                         Var,
                         Expression,
                         Objective,
-                        Block)
+                        Block,
+                        value)
 from pyomo.common.dependencies import (
     networkx, networkx_available as has_networkx
 )
