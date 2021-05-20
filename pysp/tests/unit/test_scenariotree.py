@@ -485,9 +485,9 @@ class TestScenarioTreeFromNetworkX(unittest.TestCase):
         self.assertEqual(
             sorted(list(model.Scenarios)),
             sorted(["Child1", "Child2"]))
-        self.assertEqual(model.ConditionalProbability["Root"], 1.0)
-        self.assertEqual(model.ConditionalProbability["Child1"], 0.8)
-        self.assertEqual(model.ConditionalProbability["Child2"], 0.2)
+        self.assertEqual(value(model.ConditionalProbability["Root"]), 1.0)
+        self.assertEqual(value(model.ConditionalProbability["Child1"]), 0.8)
+        self.assertEqual(value(model.ConditionalProbability["Child2"]), 0.2)
         model.StageCost["Stage1"] = "c1"
         model.StageCost["Stage2"] = "c2"
         model.StageVariables["Stage1"].add("x")
@@ -531,9 +531,9 @@ class TestScenarioTreeFromNetworkX(unittest.TestCase):
         self.assertEqual(
             sorted(list(model.Scenarios)),
             sorted(["Child1", "Child2"]))
-        self.assertEqual(model.ConditionalProbability["Root"], 1.0)
-        self.assertEqual(model.ConditionalProbability["Child1"], 0.8)
-        self.assertEqual(model.ConditionalProbability["Child2"], 0.2)
+        self.assertEqual(value(model.ConditionalProbability["Root"]), 1.0)
+        self.assertEqual(value(model.ConditionalProbability["Child1"]), 0.8)
+        self.assertEqual(value(model.ConditionalProbability["Child2"]), 0.2)
 
         self.assertEqual(model.StageCost["Stage1"].value, None)
         self.assertEqual(list(model.StageVariables["Stage1"]), [])
@@ -590,9 +590,9 @@ class TestScenarioTreeFromNetworkX(unittest.TestCase):
         self.assertEqual(
             sorted(list(model.Scenarios)),
             sorted(["S1", "S2"]))
-        self.assertEqual(model.ConditionalProbability["Root"], 1.0)
-        self.assertEqual(model.ConditionalProbability["Child1"], 0.8)
-        self.assertEqual(model.ConditionalProbability["Child2"], 0.2)
+        self.assertEqual(value(model.ConditionalProbability["Root"]), 1.0)
+        self.assertEqual(value(model.ConditionalProbability["Child1"]), 0.8)
+        self.assertEqual(value(model.ConditionalProbability["Child2"]), 0.2)
         model.StageCost["T1"] = "c1"
         model.StageCost["T2"] = "c2"
         model.StageVariables["T1"].add("x")
@@ -654,19 +654,19 @@ class TestScenarioTreeFromNetworkX(unittest.TestCase):
         self.assertEqual(
             sorted(list(model.Scenarios)),
             sorted([4, 5, 6, 7, 8, 9, 10, 11, 12]))
-        self.assertEqual(model.ConditionalProbability[0], 1.0)
-        self.assertAlmostEqual(model.ConditionalProbability[1], 1.0/3)
-        self.assertAlmostEqual(model.ConditionalProbability[2], 1.0/3)
-        self.assertAlmostEqual(model.ConditionalProbability[3], 1.0/3)
-        self.assertAlmostEqual(model.ConditionalProbability[4], 1.0/3)
-        self.assertAlmostEqual(model.ConditionalProbability[5], 1.0/3)
-        self.assertAlmostEqual(model.ConditionalProbability[6], 1.0/3)
-        self.assertAlmostEqual(model.ConditionalProbability[7], 1.0/3)
-        self.assertAlmostEqual(model.ConditionalProbability[8], 1.0/3)
-        self.assertAlmostEqual(model.ConditionalProbability[9], 1.0/3)
-        self.assertAlmostEqual(model.ConditionalProbability[10], 1.0/3)
-        self.assertAlmostEqual(model.ConditionalProbability[11], 1.0/3)
-        self.assertAlmostEqual(model.ConditionalProbability[12], 1.0/3)
+        self.assertEqual(value(model.ConditionalProbability[0]), 1.0)
+        self.assertAlmostEqual(value(model.ConditionalProbability[1]), 1.0/3)
+        self.assertAlmostEqual(value(model.ConditionalProbability[2]), 1.0/3)
+        self.assertAlmostEqual(value(model.ConditionalProbability[3]), 1.0/3)
+        self.assertAlmostEqual(value(model.ConditionalProbability[4]), 1.0/3)
+        self.assertAlmostEqual(value(model.ConditionalProbability[5]), 1.0/3)
+        self.assertAlmostEqual(value(model.ConditionalProbability[6]), 1.0/3)
+        self.assertAlmostEqual(value(model.ConditionalProbability[7]), 1.0/3)
+        self.assertAlmostEqual(value(model.ConditionalProbability[8]), 1.0/3)
+        self.assertAlmostEqual(value(model.ConditionalProbability[9]), 1.0/3)
+        self.assertAlmostEqual(value(model.ConditionalProbability[10]), 1.0/3)
+        self.assertAlmostEqual(value(model.ConditionalProbability[11]), 1.0/3)
+        self.assertAlmostEqual(value(model.ConditionalProbability[12]), 1.0/3)
         model.StageCost["Stage1"] = "c1"
         model.StageCost["Stage2"] = "c2"
         model.StageCost["Stage3"] = "c3"
@@ -716,11 +716,11 @@ class TestScenarioTreeFromNetworkX(unittest.TestCase):
         self.assertEqual(
             sorted(list(model.Scenarios)),
             sorted(["00", "01", "1"]))
-        self.assertEqual(model.ConditionalProbability["R"], 1.0)
-        self.assertEqual(model.ConditionalProbability["0"], 0.5)
-        self.assertEqual(model.ConditionalProbability["1"], 0.5)
-        self.assertEqual(model.ConditionalProbability["00"], 0.5)
-        self.assertEqual(model.ConditionalProbability["01"], 0.5)
+        self.assertEqual(value(model.ConditionalProbability["R"]), 1.0)
+        self.assertEqual(value(model.ConditionalProbability["0"]), 0.5)
+        self.assertEqual(value(model.ConditionalProbability["1"]), 0.5)
+        self.assertEqual(value(model.ConditionalProbability["00"]), 0.5)
+        self.assertEqual(value(model.ConditionalProbability["01"]), 0.5)
         model.StageCost["Stage1"] = "c1"
         model.StageCost["Stage2"] = "c2"
         model.StageCost["Stage3"] = "c3"
@@ -756,9 +756,9 @@ class TestScenarioTreeFromNetworkX(unittest.TestCase):
         self.assertEqual(
             sorted(list(model.Scenarios)),
             sorted(["u0", "u1", "u2", "u3"]))
-        self.assertEqual(model.ConditionalProbability["r"], 1.0)
+        self.assertEqual(value(model.ConditionalProbability["r"]), 1.0)
         for i in range(4):
-            self.assertEqual(model.ConditionalProbability["u"+str(i)],
+            self.assertEqual(value(model.ConditionalProbability["u"+str(i)]),
                              0.25)
         self.assertEqual(model.Bundling.value, True)
         self.assertEqual(list(model.Bundles), [0, 1])
