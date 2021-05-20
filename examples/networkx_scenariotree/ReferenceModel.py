@@ -32,7 +32,7 @@ def pysp_instance_creation_callback(scenario_name, node_names):
         model.SecondStageCost.expr = (model.xu0 - 1)**2
 
         model.y0 = aml.Var()
-        model.c.add(expr= -10 <= model.y0 <= 10)
+        model.c.add(expr= aml.inequality(-10, model.y0, 10))
         if scenario_name == "u00":
             model.yu00 = aml.Var()
             model.c.add(model.yu00 == model.y0)
@@ -50,7 +50,7 @@ def pysp_instance_creation_callback(scenario_name, node_names):
         model.SecondStageCost.expr = (model.xu1 + 1)**2
 
         model.y1 = aml.Var()
-        model.c.add(expr= -10 <= model.y1 <= 10)
+        model.c.add(expr= aml.inequality(-10, model.y1, 10))
         if scenario_name == "u10":
             model.yu10 = aml.Var()
             model.c.add(model.yu10 == model.y1)
@@ -68,7 +68,7 @@ def pysp_instance_creation_callback(scenario_name, node_names):
         model.SecondStageCost.expr = (model.xu2 - 0.5)**2
 
         model.y2 = aml.Var()
-        model.c.add(expr= -10 <= model.y2 <= 10)
+        model.c.add(expr= aml.inequality(-10, model.y2, 10))
         if scenario_name == "u20":
             model.yu20 = aml.Var()
             model.c.add(model.yu20 == model.y2)
