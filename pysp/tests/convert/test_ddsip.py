@@ -145,7 +145,7 @@ class TestConvertDDSIPSimple(unittest.TestCase):
             b"TypeError: Declarations "
             b"in annotation type StochasticConstraintBodyAnnotation "
             b"must be of types Constraint or Block. Invalid type: "
-            b"<class 'pyomo.core.base.objective.SimpleObjective'>")
+            b"<class 'pyomo.core.base.objective.ScalarObjective'>")
         shutil.rmtree(output_dir,
                       ignore_errors=True)
         os.remove(outfile)
