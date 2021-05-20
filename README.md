@@ -1,6 +1,6 @@
 [![Github Actions Status](https://github.com/Pyomo/pysp/workflows/GitHub%20CI/badge.svg?event=push)](https://github.com/Pyomo/pysp/actions?query=event%3Apush+workflow%3A%22GitHub+CI%22)
 [![Jenkins Status](https://img.shields.io/jenkins/s/https/software.sandia.gov/downloads/pub/pyomo/jenkins/PySP_trunk.svg?logo=jenkins&logoColor=white)](https://jenkins-srn.sandia.gov/job/Pyomo_pysp_trunk)
-[![codecov](https://codecov.io/gh/Pyomo/pysp/branch/master/graph/badge.svg)](https://codecov.io/gh/Pyomo/pysp)
+[![codecov](https://codecov.io/gh/Pyomo/pysp/branch/main/graph/badge.svg)](https://codecov.io/gh/Pyomo/pysp)
 
 [![GitHub contributors](https://img.shields.io/github/contributors/pyomo/pysp.svg)](https://github.com/pyomo/pysp/graphs/contributors)
 [![Merged PRs](https://img.shields.io/github/issues-pr-closed-raw/pyomo/pysp.svg?label=merged+PRs)](https://github.com/pyomo/pysp/pulls?q=is:pr+is:merged)

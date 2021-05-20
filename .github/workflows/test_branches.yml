@@ -1,12 +1,9 @@
-name: GitHub CI
+name: GitHub Branch CI
 
 on:
   push:
-    branches:
-      - master
-  pull_request:
-    branches:
-      - master
+    branches-ignore:
+      - main
   workflow_dispatch:
     inputs:
       git-ref:
@@ -39,8 +36,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-18.04, macos-latest, windows-latest]
-        python: [3.6, 3.7, 3.8, 3.9, pypy3]
+        os: [ubuntu-18.04]
+        python: [3.8]
         other: [""]
         category: ["nightly"]
         # Ubuntu-18.04 should be replaced with ubuntu-latest once PyNumero
@@ -53,10 +50,12 @@ jobs:
           PYENV: pip
 
         - os: macos-latest
+          python: 3.6
           TARGET: osx
           PYENV: pip
 
         - os: windows-latest
+          python: 3.7
           TARGET: win
           PYENV: conda
           PACKAGES: glpk
@@ -76,10 +75,6 @@ jobs:
           skip_doctest: 1
           TARGET: linux
           PYENV: pip
-
-        exclude:
-        - {os: macos-latest, python: pypy3}
-        - {os: windows-latest, python: pypy3}
 
     steps:
     - name: Checkout PySP source
@@ -277,7 +272,6 @@ jobs:
       run: |
         IPOPT_DIR=$TPL_DIR/ipopt
         echo "$IPOPT_DIR" >> $GITHUB_PATH
-        echo "LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$IPOPT_DIR" >> $GITHUB_ENV
         mkdir -p $IPOPT_DIR
         IPOPT_TAR=${DOWNLOAD_DIR}/ipopt.tar.gz
         if test ! -e $IPOPT_TAR; then
